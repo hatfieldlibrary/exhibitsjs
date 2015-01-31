@@ -41,6 +41,8 @@ var foundationJS = [
 ];
 // These files are for your app's JavaScript
 var appJS = [
+    'client/assets/js/controllers.js',
+    'client/assets/js/directives.js',
   'client/assets/js/app.js'
 ];
 
@@ -65,6 +67,10 @@ gulp.task('copy', function() {
     base: './client/'
   })
     .pipe(gulp.dest('./build'));
+
+    // Angular directives
+    gulp.src('./client/assets/components/*')
+        .pipe(gulp.dest('./build/assets/components/'));
 
   // Iconic SVG icons
   gulp.src('./bower_components/foundation-apps/iconic/**/*')

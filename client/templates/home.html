@@ -6,20 +6,10 @@ url: /
 
 <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content">
 
-    <section class="block-list with-icons">
+    <section class="block-list" ng-controller="MainOptionsCtrl">
         <ul>
-            <li>
-
-                <a href="#">Home</a>
-            </li>
-            <!-- With an icon -->
-            <li>
-
-                <a href="#">Painting</a>
-            </li>
-            <li>
-
-                <a href="#">Photography</a>
+            <li ng-repeat="option in options">
+                <exhibit-main-option name="{{option.name}}"></exhibit-main-option>
             </li>
         </ul>
     </section>
