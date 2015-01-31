@@ -1,6 +1,7 @@
 # Museum Exhibit App
 
-This project will be a single page JavaScript application, written using the new Foundation 5
+This project will be a single page JavaScript application, written using the new Foundation for apps.  It will be optimized for a touch screen panel that will accompany museum installations.
+It will also be fine to use the exhibit as a permanent addition to the museum website, if that's desired.  The website will be mobile friendly.
 
 # Foundation for Apps Template
 
