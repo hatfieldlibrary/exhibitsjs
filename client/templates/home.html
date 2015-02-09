@@ -3,91 +3,59 @@ name: home
 url: /
 ---
 
+<div class="grid-block" ng-controller="MainOptionsCtrl">
 
-<div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content">
 
-    <section class="block-list" ng-controller="MainOptionsCtrl">
-        <ul>
-            <li ng-repeat="option in options">
-                <exhibit-main-option name="{{option.name}}"></exhibit-main-option>
+    <div  ng-init="updateSelectedItem(0); "></div>
+    <!-- primary navigation -->
+    <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content">
+        <section class="block-list">
+            <ul>
+                <li ng-repeat="mainNav in layout">
+                    <a   ng-click="updateSelectedItem($index)">{{mainNav.section.name.label}}</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+
+    <!-- secondary navigation -->
+    <div class="small-12 medium-2 messages grid-content" ng-init="setPageIndex(0)">
+        <a class="button secondary expand hide-for-medium" zf-open="sub-nav">Options</a>
+        <section class="block-list" >
+            <li ng-repeat="subNav in layout[context.primaryNavigation.selectedItem].section.secondaryNav" >
+                <h5 zf-hard-toggle="info"><a ng-click="setPageIndex($index)" >{{subNav.section.title}}</a></h5>
             </li>
-        </ul>
-    </section>
-</div>
-
-<div class="small-12 medium-2 messages grid-content">
-    <a class="button secondary expand hide-for-medium" zf-open="sub-nav">This</a>
-    <section class="block-list">
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a painting</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a photograph</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a message</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a message</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a message</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-        <li>
-            <a zf-hard-toggle="message">
-                <h5>This is a message</h5>
-                <p>It's a pretty long message, but thats chill, we totes like to read now a days.</p>
-            </a>
-        </li>
-    </section>
-</div>
-
-<div zf-panel id="message" position="right" class="fast bounceInOut small-12 medium-8 medium-grid-content">
-    <h2>This is a painting</h2>
-    <p>Mike Meyers - 6/12/2014</p>
-    <hr />
-    <p>Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
-    </p>
-    <p>Ut in nulla Wow. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
-    </p>
-    <p>Ut in nulla Pop. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
-    </p>
-    <p>Ut in nulla Bam. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor posuere. Praesent id metus massa, ut blandit odio. Proin quis tortor orci. Etiam at risus et justo dignissim congue. Donec congue lacinia dui, a porttitor lectus condimentum laoreet. Nunc eu.
-    </p>
-</div>
-
-<!-- Start Compose Message -->
-<zf-modal overlay="true" id="compose">
-    <div class="grid-block vertical">
-        <div class="primary title-bar">
-            <div class="center title">Compose Message</div>
-            <span class="left"><a zf-close="compose" href="#">Cancel</a></span>
-            <span class="right"><a href="#">Send</a></span>
-        </div>
-        <div class="grid-content">
-            <label>Email
-                <input type="text" placeholder="email@zmail.com" />
-            </label>
-            <label>Message
-                <textarea placeholder="hello..."></textarea>
-            </label>
-        </div>
+        </section>
     </div>
+
+    <!-- main panel -->
+
+
+
+    <div exhibit-panel-right=""
+         update-page="setCurrentPage(context.secondaryNavigation.pageIndex)"
+         my-callback="myCallback()"
+         id="info"
+         position="bottom"
+         class="slow bounceInOut large-8 small-grid-content shrink" >
+        <div  ng-if="context.pageElements.contentType=='text'">
+            <exhibit-text description="{{context.pageElements.html}}" class="grid-frame"></exhibit-text>
+        </div>
+
+        <div ng-if="context.pageElements.contentType=='image'" >
+            <exhibit-image url="{{context.pageElements.imageFileName}}" description="{{context.pageElements.currentPage}}" title="{{context.pageElements.imageTitle}}"></exhibit-image>
+        </div>
+        <div ng-if="context.pageElements.contentType=='imageArray'">
+            <exhibit-book-turner title="{{context.pageElements.imageTitle}}" images="context.secondaryNavigation.imageArray"></exhibit-book-turner>
+        </div>
+
+        <div ng-if="context.pageElements.contentType=='pagesArray'">
+            <exhibit-book-turner title="{{context.pageElements.imageTitle}}" images="imageArray"></exhibit-book-turner>
+        </div>
+
     </div>
-</zf-modal>
-<!-- End Compose Message -->
+
+
+</div>
+

@@ -1,0 +1,24 @@
+
+<div class="vertical grid-block small-12" >
+
+    <div ng-repeat="img in images">
+
+        <zf-interchange>
+            <img media="small" src="/assets/images/{{img.imageFileName}}.jpg">
+            <img media="medium" src="/assets/images/{{img.imageFileName}}.jpg">
+            <img media="large" src="/assets/images/{{img.imageFileName}}.jpg">
+        </zf-interchange>
+
+        <div class="grid-block small-12">
+
+            <p>{{img.description}}</p>
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+

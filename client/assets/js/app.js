@@ -4,11 +4,17 @@
     angular.module('exhibitsApp', [
         'ui.router',
         'ngAnimate',
+        'ngSanitize',
+        'slick',
+
         'exhibitControllers',
+        'exhibitServices',
         'exhibitDirectives',
+
 
         //foundation
         'foundation',
+        'foundation.core',
         'foundation.dynamicRouting',
         'foundation.dynamicRouting.animations'
     ])
@@ -16,6 +22,7 @@
         .run(run)
     ;
 
+    ;
     config.$inject = ['$urlRouterProvider', '$locationProvider'];
 
     function config($urlProvider, $locationProvider) {
