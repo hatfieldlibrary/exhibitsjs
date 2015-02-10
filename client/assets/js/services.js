@@ -44,34 +44,30 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                         section: {
                             title: 'Self-Portrait of William Merritt Chase',
                             type: 'image',
-                            imageTitle: 'Self-Portrait 2',
                             description: 'oil on canvas, William Merritt Chase, artist.',
                             imageFileName: 'AMICO_DETROIT_1039543998'
                         }
                     },
                     {
                         section: {
-                            title: 'Studio',
                             type: 'image',
-                            imageTitle: 'Studio Interior',
+                            title: 'Studio Interior',
                             description: 'William Merritt Chase, artist, ca 1882.',
                             imageFileName: 'Chase_Studio_Interior'
                         }
                     },
                     {
                         section: {
-                            title: 'Portrait of Chase\'s Studio',
                             type: 'image',
-                            imageTitle: 'William Merritt Chase\'s Painting Class',
-                            description: 'Art Students League New York, 1891-92, ca. 1882.',
+                            title: 'William Merritt Chase\'s Painting Class',
+                            description: 'Art Students League New York, 1891-92, Myra Albert, photographer.',
                             imageFileName: 'Chase_Painting_Class'
                         }
                     },
                     {
                         section: {
-                            title: 'Portrait of Myra Wiggins Studio',
                             type: 'image',
-                            imageTitle: 'Corner of My Studio 2',
+                            title: 'Corner of My Studio 2',
                             description: 'Myra Albert Wiggins, artist.',
                             imageFileName: 'Corner_of_my_studio'
                         }
@@ -107,15 +103,15 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                             type: 'pagesArray',
                             imageArray: [
                                 {
-                                    imageFileName: '',
+                                    imageFileName: 'Bausch-and-Lomb1',
                                     description: 'Page one'
                                 },
                                 {
-                                    imageFileName: '',
+                                    imageFileName: 'Bausch-and-Lomb2',
                                     description: 'Page two'
                                 },
                                 {
-                                    imageFileName: '',
+                                    imageFileName: 'Bausch-and-Lomb3',
                                     description: 'Page three'
                                 }
 
@@ -168,58 +164,92 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                 secondaryNav: [
                     {
                         section: {
-                            title: 'Immanuel',
-                            type: 'text',
-                            html: ''
-                        }
-                    },
-                    {
-                        section: {
-                            title: 'In Holland',
-                            type: 'text',
-                            html: ''
+                            type: 'image',
+                            title: 'Confusion',
+                            description: 'poem by Myra Wiggins',
+                            imageFileName: 'Wiggins_Confusion-Triolet'
                         }
                     },
                     {
                         section: {
                             title: 'My Sweetheart',
-                            type: 'text',
-                            html: ''
+                            type: 'pagesArray',
+                            imageArray: [
+                                {
+                                    imageFileName: 'Wiggins_My-Sweetheart',
+                                    description: 'Page one'
+                                },
+                                {
+                                    imageFileName: 'Wiggins_My-Sweetheart_back',
+                                    description: 'Page two'
+                                },
+
+                            ]
+                        }
+                    },
+                    {
+                        section: {
+                            type: 'image',
+                            title: 'Spring\'s Resurrection',
+                            description: 'poem by Myra Wiggins',
+                            imageFileName: 'Wiggins_Spring\'s-Resurrection'
                         }
                     },
                     {
                         section: {
                             title: 'The Lost Butterfly',
-                            type: 'text',
-                            html: ''
+                            type: 'pagesArray',
+                            imageArray: [
+                                {
+                                    imageFileName: 'Wiggins_The-Lost-Butterfly',
+                                    description: 'Page one'
+                                },
+                                {
+                                    imageFileName: 'Wiggins_The-Lost-Butterfly_back',
+                                    description: 'Page two'
+                                },
+                            ]
                         }
+
                     },
                     {
                         section: {
+                            type: 'image',
                             title: 'The Star',
-                            type: 'text',
-                            html: ''
+                            description: 'poem by Myra Wiggins',
+                            imageFileName: 'Wiggins_The-Star'
                         }
                     },
                     {
                         section: {
+                            type: 'image',
                             title: 'Two Feasts',
-                            type: 'text',
-                            html: ''
+                            description: 'poem by Myra Wiggins',
+                            imageFileName: 'Wiggins_Two-Feasts'
                         }
                     },
                     {
                         section: {
+                            type: 'image',
                             title: 'Whistling Swan',
-                            type: 'text',
-                            html: ''
+                            description: 'poem by Myra Wiggins',
+                            imageFileName: 'Wiggins_Whistling-Swan'
                         }
                     },
                     {
                         section: {
-                            title: 'Youth\'s Flower Field',
-                            type: 'text',
-                            html: ''
+                            title: 'Youth\'s Flowering Field',
+                            type: 'pagesArray',
+                            imageArray: [
+                                {
+                                    imageFileName: 'Wiggins_Youth\'s-Flowering-Field',
+                                    description: 'Page one'
+                                },
+                                {
+                                    imageFileName: 'Wiggins_Youth\'s-Flowering-Field_back',
+                                    description: 'Page two'
+                                },
+                            ]
                         }
                     }
                 ]
@@ -240,35 +270,42 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                         section: {
                             title: 'Constantinople and Ephesus, 1904',
                             type: 'text',
-                            html: ''
+                            html: '/assets/html/sections/constantinople.html'
                         }
                     },
                     {
                         section: {
                             title: 'Galilee, 1904',
                             type: 'text',
-                            html: ''
+                            html: '/assets/html/sections/galilee.html'
                         }
                     },
                     {
                         section: {
-                            title: 'Tiberia and the Sea of Galilee, 1904',
+                            title: 'Tiberias and the Sea of Galilee, 1904',
                             type: 'text',
-                            html: ''
+                            html: '/assets/html/sections/tiberias.html'
                         }
                     },
                     {
                         section: {
                             title: 'Pyramids and Bazaars, 1904',
                             type: 'text',
-                            html: ''
+                            html: '/assets/html/sections/pyramids.html'
                         }
                     },
                     {
                         section: {
                             title: 'Saint Peter\’s, 1904',
                             type: 'text',
-                            html: ''
+                            html: '/assets/html/sections/stpeters.html'
+                        }
+                    },
+                    {
+                        section: {
+                            title: 'Coliseum, 1904',
+                            type: 'text',
+                            html: '/assets/html/sections/coliseum.html'
                         }
                     },
                     {

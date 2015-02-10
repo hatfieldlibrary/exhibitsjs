@@ -4,8 +4,9 @@
 }
 
 .block-list li  {
+  font-family: 'Raleway', sans-serif;
   margin-top: 5px;
-  background: rgba(87, 47, 26, 0.6);
+  background: rgba(89, 52, 32, 0.9);
   border-bottom: 1px solid #262626;
   border-radius: 10px;
   color: #eee;
@@ -16,7 +17,7 @@
 .block-list li > a, .block-list li > span, .block-list li > label {
   height: 120px;
   color: #CBBB92;
-  background: rgba(87, 47, 26, 0.6);
+  background: rgba(97, 63, 45, 0.6);
   border-bottom: 1px solid #262626;
   border-radius: 10px;
 }
@@ -38,4 +39,8 @@
 }
 .secondary-nav {
   background: #C8C6B7 !important;
+}
+
+em {
+  color: rgba(139, 120, 88, 1);
 }

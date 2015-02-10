@@ -34,6 +34,15 @@ exhibitDirectives.directive('exhibitSecondaryOption', function() {
     };
 });
 
+exhibitDirectives.directive('pageCarousel', function() {
+    return {
+        scope: false,
+        restrict: 'EA',
+        replace: true,
+        templateUrl: '/assets/components/pageTurner.html'
+    }
+});
+
 exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
 
     return {
