@@ -12,7 +12,7 @@ url: /
             <section class="block-list">
                 <ul>
                     <li ng-repeat="mainNav in layout">
-                        <a ng-click="updateSelectedItem($index);setSelectedItem(null)"  setPanelPosition(context.primaryNavigation.contentType)>{{mainNav.section.name.label}}</a>
+                        <a ng-click="updateSelectedItem($index);setSelectedItem(null);setSelectedPrimary($index);setPanelPosition(context.primaryNavigation.contentType)" ng-class="{selected: $index === selectedPrimary}">{{mainNav.section.name.label}}</a>
                     </li>
                 </ul>
             </section>

@@ -10,6 +10,7 @@ exhibitControllers.controller('MainOptionsCtrl',
         $scope.context = {};
         $scope.panelPosition = {position:'bottom'};
         $scope.selectedItem = null;
+        $scope.selectedPrimary = null;
 
         $scope.setPageIndex = function (position) {
 
@@ -44,6 +45,10 @@ exhibitControllers.controller('MainOptionsCtrl',
 
         $scope.setSelectedItem = function(index) {
             $scope.selectedItem = index;
+        };
+
+        $scope.setSelectedPrimary = function(index) {
+            $scope.selectedPrimary = index;
         };
 
     }]);
