@@ -1,0 +1,41 @@
+.text-holder {
+  background: #eee58b !important;
+  opacity: 0.5;
+}
+
+.block-list li  {
+  margin-top: 5px;
+  background: rgba(87, 47, 26, 0.6);
+  border-bottom: 1px solid #262626;
+  border-radius: 10px;
+  color: #eee;
+}
+.block-list li:first-child {
+  border-top: none;
+}
+.block-list li > a, .block-list li > span, .block-list li > label {
+  height: 120px;
+  color: #CBBB92;
+  background: rgba(87, 47, 26, 0.6);
+  border-bottom: 1px solid #262626;
+  border-radius: 10px;
+}
+
+.primary-nav .block-list li > a, .block-list li > span, .block-list li > label {
+   background-color: #A19079;
+  border-bottom: 1px solid #262626;
+  border-radius: 5px;
+  color: #2e2520 !important;
+}
+
+.selected {
+  background: #7B6B4F !important;
+}
+
+.primary-nav .block-list li {
+
+
+}
+.secondary-nav {
+  background: #C8C6B7 !important;
+}

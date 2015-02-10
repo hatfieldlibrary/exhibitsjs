@@ -6,94 +6,6 @@
 
 var exhibitDirectives  = angular.module('exhibitDirectives', []);
 
-
-exhibitDirectives.directive('exhibitBookTurner', function($window, $document) {
-
-    return {
-        //scope: {
-        //    groupTitle: '@',
-        //    images: '='
-        //},
-        scope: false,
-        restrict: 'E',
-        templateUrl: '/assets/components/pageTurner.html'
-
-    }
-
-});
-
-exhibitDirectives.directive('exhibitImageArray', function() {
-
-    return {
-        //scope: {
-        //    groupTitle: '@title',
-        //    images: '='
-        //},
-        scope: false,
-        restrict: 'E',
-        controller: 'MainOptionsCtrl',
-        templateUrl: '/assets/components/imageArray.html'
-    }
-
-});
-
-exhibitDirectives.directive('exhibitImage', ['$timeout', function($timeout) {
-
-    return {
-        //scope: {
-        //    title: '@',
-        //    description: '@',
-       //     url: '@'
-        //},
-        scope: false,
-        restrict: 'E',
-        controller: 'MainOptionsCtrl',
-        templateUrl: '/assets/components/image.html',
-        link: function (scope, element, attrs) {
-            scope.hidePanel = false;
-            scope.$watch('url', function() {
-                scope.image;
-                $timeout(function() {
-                    //   scope.hidePanel = false;
-                    scope.image = scope.url;
-
-                }, 390);
-            });
-            element.ready(scope.myCallback());
-
-        }
-    }
-
-}]);
-
-exhibitDirectives.directive('exhibitText', ['$timeout', function($timeout) {
-
-    return {
-        //scope: {
-       //     description: '@'
-       // },
-        scope: false,
-        restrict: 'EA',
-        // controller: 'MainOptionsCtrl',
-        templateUrl: '/assets/components/text.html',
-        compile: false,
-        link: function (scope, element, attrs) {
-            scope.hidePanel = false;
-            scope.$watch('url', function() {
-                scope.image;
-                $timeout(function() {
-                    //   scope.hidePanel = false;
-                    scope.content = scope.description;
-
-                }, 330);
-            });
-        }
-
-    }
-
-}]);
-
-
 exhibitDirectives.directive('exhibitMainOption', function() {
 
     return {
@@ -122,137 +34,23 @@ exhibitDirectives.directive('exhibitSecondaryOption', function() {
     };
 });
 
-exhibitDirectives.directive('exhibitTestPanel', function() {
-     return {
-         scope: {
-             position: '@?',
-             pageIndex: '@',
-             updatePage: '&'
-
-         },
-         restrict: 'EA',
-         templateUrl: '/assets/components/exhibitPanel.html',
-         transclude: true,
-         replace: true,
-         compile: function (tElement, tAttrs, transclude) {
-
-             var type = 'panel';
-
-             return {
-                 pre: preLink,
-                 post: postLink
-             };
-
-             function preLink(scope, iElement, iAttrs, controller) {
-
-                 iAttrs.$set('zf-closable', type);
-                 scope.position = scope.position || 'left';
-                 scope.positionClass = 'panel-' + scope.position;
-
-
-
-             }
-
-             function postLink(scope, element, attrs) {
-
-
-                 scope.active = false;
-                 foundationApi.subscribe
-                 var delay;
-                 var animationIn, animationOut;
-                 var globalQueries = foundationApi.getSettings().mediaQueries;
-
-                 //urgh, there must be a better way
-                 if (scope.position === 'left') {
-                     animationIn = attrs.animationIn || 'slideInRight';
-                     animationOut = attrs.animationOut || 'slideOutLeft';
-                 } else if (scope.position === 'right') {
-                     animationIn = attrs.animationIn || 'slideInLeft';
-                     animationOut = attrs.animationOut || 'slideOutRight';
-                 } else if (scope.position === 'top') {
-                     animationIn = attrs.animationIn || 'slideInDown';
-                     animationOut = attrs.animationOut || 'slideOutUp';
-                 } else if (scope.position === 'bottom') {
-                     animationIn = attrs.animationIn || 'slideInUp';
-                     animationOut = attrs.animationOut || 'slideOutBottom';
-                 }
-
-                 attrs.$set('overflow', 'scroll');
-
-
-                 //setup
-                 foundationApi.subscribe(attrs.id, function () {
-
-
-                     //scope.hide();
-                     //    foundationApi.animate(element, scope.active, animationIn, animationOut);
-                     //scope.hide();
-                     //
-                     foundationApi.animate(element, scope.active, animationIn, animationOut);
-                    // delay = $timeout(function () {
-                         //scope.show();
-                       //  scope.updatePage(scope.pageIndex);
-                         //foundationApi.animate(element, scope.active, animationIn, animationOut);
-                         //  scope.show();
-
-                    // }, 800);
-
-                     scope.$apply();
-
-                     return;
-
-                 });
-
-                 scope.hide = function () {
-                     scope.active = false;
-                     return;
-                 };
-
-                 scope.show = function () {
-                     scope.active = true;
-                     return;
-                 };
-
-                 scope.toggle = function () {
-                     scope.active = !scope.active;
-                     return;
-                 };
-
-                 scope.$on('$destroy', function () {
-                     $timeout.cancel(delay);
-                 });
-
-                 element.on('click', function (e) {
-                     //check sizing
-                     var srcEl = e.srcElement;
-
-                     if (!matchMedia(globalQueries.medium).matches && srcEl.href && srcEl.href.length > 0) {
-                         //hide element if it can't match at least medium
-                         scope.hide();
-                         foundationApi.animate(element, scope.active, animationIn, animationOut);
-                     }
-                 });
-             }
-
-         }
-
-     };
-
-});
-
-exhibitDirectives.directive('exhibitPanelTop', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
+exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
 
     return {
         scope: {
-            position: '@?',
+            panelPosition: '=',
             pageIndex: '@',
-            updatePage: '&'
-
+            updatePage: '&',
+            context: '='
         },
         restrict: 'EA',
         templateUrl: '/assets/components/exhibitPanel.html',
         transclude: true,
         replace: true,
+
+        // The compile function is based on Foundation for Apps
+        // panel module directive. Uses the injected foundationApi
+        // service.
         compile: function (tElement, tAttrs, transclude) {
 
             var type = 'panel';
@@ -262,55 +60,73 @@ exhibitDirectives.directive('exhibitPanelTop', ['FoundationApi','$timeout', func
                 post: postLink
             };
 
+            // preLink and postLink based on foundation's panel
+            // directive.  Since this directive also watches for
+            // changes in panel position and updates panel content,
+            // more happens inside the postLink function.
             function preLink(scope, iElement, iAttrs, controller) {
 
                 iAttrs.$set('zf-closable', type);
-                scope.position = scope.position || 'left';
-                scope.positionClass = 'panel-' + scope.position;
 
             }
 
             function postLink(scope, element, attrs) {
 
+                scope.position = scope.panelPosition.position || 'left';
                 scope.active = false;
-                foundationApi.subscribe
-                var delay;
-                var animationIn, animationOut;
-                var globalQueries = foundationApi.getSettings().mediaQueries;
+                foundationApi.subscribe;
 
-                //urgh, there must be a better way
-                if (scope.position === 'left') {
-                    animationIn = attrs.animationIn || 'slideInRight';
-                    animationOut = attrs.animationOut || 'slideOutLeft';
-                } else if (scope.position === 'right') {
-                    animationIn = attrs.animationIn || 'slideInLeft';
-                    animationOut = attrs.animationOut || 'slideOutRight';
-                } else if (scope.position === 'top') {
-                    animationIn = attrs.animationIn || 'slideInDown';
-                    animationOut = attrs.animationOut || 'slideOutUp';
-                } else if (scope.position === 'bottom') {
-                    animationIn = attrs.animationIn || 'slideInUp';
-                    animationOut = attrs.animationOut || 'slideOutBottom';
-                }
+                var oldPosition = 'bottom';
 
-                attrs.$set('overflow', 'scroll');
+                var animationIn,
+                    animationOut,
+                    showDelay,
+                    updateDelay,
+                    globalQueries = foundationApi.getSettings().mediaQueries;
 
-
-                //setup
                 foundationApi.subscribe(attrs.id, function () {
 
-                    //scope.hide();
-                //    foundationApi.animate(element, scope.active, animationIn, animationOut);
-                    //scope.hide();
-                    //
-                    foundationApi.animate(element, scope.active, animationIn, animationOut);
-                    delay = $timeout(function () {
-                        //scope.show();
-                        scope.updatePage(scope.pageIndex);
-                        //foundationApi.animate(element, scope.active, animationIn, animationOut);
-                      //  scope.show();
+                    var delay = {};
 
-                    }, 800);
+                    var pageType = scope.context.secondaryNavigation.contentType;
+
+                    if (pageType === undefined) {
+                        pageType = scope.context.primaryNavigation.contentCategory;
+                    }
+
+                    if (pageType !== undefined) {
+                        // delays can be set independently
+                        if (pageType === 'text') { // left exit
+                            delay = {delayIn: 1200, delayOut: 1700}
+                        } else {
+                            delay = {delayIn: 1000, delayOut: 1700}
+                        }
+                    }
+                    console.log(pageType) ;
+
+                    // animation behaviour changes with panel position
+                    scope.$watch(scope.panelPosition.position, function() {
+
+                        scope.position = scope.panelPosition.position;
+
+                        if (oldPosition != scope.position) {
+
+                            oldPosition = scope.position;
+                            scope.positionClass = 'panel-' + scope.position;
+                            element.removeClass('panel-' + oldPosition);
+                            element.addClass('panel-' + scope.position);
+                            scope.setAnimation();
+                            scope.hide();
+                            scope.delayedAnimation(delay);
+
+                        } else {
+
+                            scope.setAnimation();
+                            scope.hide();
+                            scope.delayedAnimation(delay);
+
+                        }
+                    });
 
                     scope.$apply();
 
@@ -318,25 +134,79 @@ exhibitDirectives.directive('exhibitPanelTop', ['FoundationApi','$timeout', func
 
                 });
 
+                scope.setAnimation = function() {
+
+                    if (scope.position === 'left') {
+                        animationIn = attrs.animationIn || 'slideInRight';
+                        animationOut = attrs.animationOut || 'slideOutLeft';
+                    } else if (scope.position === 'right') {
+                        animationIn = attrs.animationIn || 'slideInLeft';
+                        animationOut = attrs.animationOut || 'slideOutRight';
+                    } else if (scope.position === 'top') {
+                        animationIn = attrs.animationIn || 'slideInDown';
+                        animationOut = attrs.animationOut || 'slideOutUp';
+                    } else if (scope.position === 'bottom') {
+                        animationIn = attrs.animationIn || 'slideInUp';
+                        animationOut = attrs.animationOut || 'slideOutBottom';
+                    }
+
+                };
+
+                // Updates template content and calls animation
+                // using $timeout delays. It would be better to
+                // use a DOM rendered or callback event, but I
+                // wasn't able to accomplish that.
+                scope.delayedAnimation = function(delay) {
+
+                    updateDelay = $timeout(function () {
+                        scope.updatePage(scope.pageIndex);
+                    }, delay.delayIn);
+
+                    showDelay = $timeout(function() {
+                        scope.show();
+                    }, delay.delayOut);
+
+                };
+
+                // cleanup timers
+                scope.$on('$destroy', function () {
+
+                    $timeout.cancel(showDelay);
+                    $timeout.cancel(updateDelay);
+
+                });
+
+                // these are the current foundation for apps method calls,
+                // using the foundationApi.
                 scope.hide = function () {
-                    scope.active = false;
+
+                    if(scope.active){
+                        scope.active = false;
+                        foundationApi.animate(element, scope.active, animationIn, animationOut);
+
+                    }
+
                     return;
                 };
 
                 scope.show = function () {
-                    scope.active = true;
+
+                    if(!scope.active){
+                        scope.active = true;
+                        foundationApi.animate(element, scope.active, animationIn, animationOut);
+                    }
                     return;
                 };
 
                 scope.toggle = function () {
+
                     scope.active = !scope.active;
+                    foundationApi.animate(element, scope.active, animationIn, animationOut);
                     return;
                 };
 
-                scope.$on('$destroy', function () {
-                    $timeout.cancel(delay);
-                });
 
+                // possibly unnecessary
                 element.on('click', function (e) {
                     //check sizing
                     var srcEl = e.srcElement;
@@ -348,115 +218,6 @@ exhibitDirectives.directive('exhibitPanelTop', ['FoundationApi','$timeout', func
                     }
                 });
             }
-
-        }
-    };
-}]);
-
-exhibitDirectives.directive('exhibitPanelRight', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
-
-    return {
-        scope: {
-            position: '@?',
-            pageIndex: '@',
-            updatePage: '&'
-
-        },
-        restrict: 'EA',
-        templateUrl: '/assets/components/exhibitPanel.html',
-        transclude: true,
-        replace: true,
-        compile: function (tElement, tAttrs, transclude) {
-
-            var type = 'panel';
-
-            return {
-                pre: preLink,
-                post: postLink
-            };
-
-            function preLink(scope, iElement, iAttrs, controller) {
-
-                iAttrs.$set('zf-closable', type);
-                scope.position = scope.position || 'left';
-                scope.positionClass = 'panel-' + scope.position;
-
-            }
-
-            function postLink(scope, element, attrs) {
-
-                scope.active = false;
-                foundationApi.subscribe
-                var delay;
-                var animationIn, animationOut;
-                var globalQueries = foundationApi.getSettings().mediaQueries;
-
-                //urgh, there must be a better way
-                if (scope.position === 'left') {
-                    animationIn = attrs.animationIn || 'slideInRight';
-                    animationOut = attrs.animationOut || 'slideOutLeft';
-                } else if (scope.position === 'right') {
-                    animationIn = attrs.animationIn || 'slideInLeft';
-                    animationOut = attrs.animationOut || 'slideOutRight';
-                } else if (scope.position === 'top') {
-                    animationIn = attrs.animationIn || 'slideInDown';
-                    animationOut = attrs.animationOut || 'slideOutUp';
-                } else if (scope.position === 'bottom') {
-                    animationIn = attrs.animationIn || 'slideInUp';
-                    animationOut = attrs.animationOut || 'slideOutBottom';
-                }
-
-                attrs.$set('overflow', 'scroll');
-
-                //setup
-                foundationApi.subscribe(attrs.id, function () {
-
-                    foundationApi.animate(element, scope.active, animationIn, animationOut);
-                    delay = $timeout(function () {
-                        //scope.show();
-                        scope.updatePage(scope.pageIndex);
-                        //foundationApi.animate(element, scope.active, animationIn, animationOut);
-                        //  scope.show();
-
-                    }, 950);
-
-                    scope.$apply();
-
-                    return;
-
-                });
-
-                scope.hide = function () {
-                    scope.active = false;
-                    return;
-                };
-
-                scope.show = function () {
-                    scope.active = true;
-                    return;
-                };
-
-                scope.toggle = function () {
-                    scope.active = !scope.active;
-                    return;
-                };
-
-                scope.$on('$destroy', function () {
-                    $timeout.cancel(delay);
-                });
-
-                element.on('click', function (e) {
-                    //check sizing
-                    var srcEl = e.srcElement;
-
-                    if (!matchMedia(globalQueries.medium).matches && srcEl.href && srcEl.href.length > 0) {
-                        //hide element if it can't match at least medium
-                        scope.hide();
-                        foundationApi.animate(element, scope.active, animationIn, animationOut);
-                    }
-                });
-            }
-
         }
     };
 }]);

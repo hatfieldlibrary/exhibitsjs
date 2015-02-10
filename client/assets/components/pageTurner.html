@@ -1,12 +1,9 @@
 
-<div class="vertical grid-block small-12" style="width: 500px;">
-    <div>
-                        {{title}}
-        </div>
-    <slick infinite="false" autoplay="false" arrows="true" slides-to-show="2" slides-to-scroll="2" dots="true" >
-        <div ng-repeat="image in images">
-            <img  data-lazy="/assets/images/{{image.imageFileName}}.jpg" style="max-height: 800px;">
-
+<div class="vertical grid-block small-12" style="padding-left: 40px; padding-right: 40px;">
+    <h3>{{context.pageElements.title}}</h3>
+    <slick infinite="false" autoplay="false" arrows="true" slides-to-show="2" slides-to-scroll="2" dots="true">
+        <div ng-repeat="image in context.pageElements.imageArray">
+            <img  data-lazy="/assets/images/{{image.imageFileName}}.jpg" style="max-height: 850px;">
         </div>
     </slick>
 

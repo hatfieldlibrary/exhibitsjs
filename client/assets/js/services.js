@@ -28,7 +28,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
                 name: {
                     label: 'Painting',
-                    title: 'Painting'
+                    title: 'Painting and the Influence of William Merritt Chase'
                 },
                 startPage: '/assets/html/startPainting.html',
                 type: 'text',
@@ -87,7 +87,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
                 name: {
                     label: 'Photography',
-                    title: 'Photography'
+                    title: 'Photography and the Camera Club of New York'
                 },
                 startPage: '/assets/html/startPhotography.html',
                 type: 'text',
@@ -231,7 +231,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
                 name: {
                     label: 'Travel',
-                    title: 'Travel'
+                    title: 'Travel Letters: 1904 and 1954'
                 },
                 startPage: '/assets/html/startTravel.html',
                 type: 'text',
@@ -299,7 +299,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
 
 
-
+    // End of the exhibit layout section.
     // Do not edit beyond this point unless you know what you are doing!
 
 
@@ -339,10 +339,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
         primaryNavigation: {
             contentCategory: '',
-            currentTitle: '',
             selectedItem:'',
-            contentType: '',
-            currentPage: '',
             section: ''
         },
         secondaryNavigation: {
@@ -352,7 +349,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
         },
         pageElements: {
             imageFileName: '',
-            imageTitle: '',
+            title: '',
             imageDescription: '',
             html: '',
             imageArray: '',
@@ -393,7 +390,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
         service.context.pageElements.html = _currentPage;
         service.context.pageElements.imageArray = _imageArray;
         service.context.pageElements.imageFileName = _imageFileName;
-        service.context.pageElements.imageTitle = _imageTitle;
+        service.context.pageElements.title = _imageTitle;
         service.context.pageElements.imageDescription = _imageDescription;
         service.context.pageElements.contentType = _contentType;
 
@@ -405,18 +402,18 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
         _sectionPrimary = layout[position];
         _contentTypePrimary = layout[position].section.type;
         if (_contentType == 'text') {
-            _contentCategoryPrimary = 'textinfo';
+            _contentCategoryPrimary = 'text';
         }  else {
-            _contentCategoryPrimary = 'imageinfo';
+            _contentCategoryPrimary = 'image';
         }
         _secondaryNav = layout[position].section.secondaryNav;
         _currentPagePrimary = layout[position].section.startPage;
         _currentTitlePrimary = layout[position].section.name.title;
+        service.context.pageElements.contentType = _contentTypePrimary;
+        service.context.pageElements.title = _currentTitlePrimary;
+        service.context.pageElements.html = _currentPagePrimary;
         service.context.primaryNavigation.contentCategory = _contentCategoryPrimary;
         service.context.primaryNavigation.selectedItem = _selectedItemPrimary;
-        service.context.primaryNavigation.contentType = _contentTypePrimary;
-        service.context.primaryNavigation.currentTitle = _currentTitlePrimary;
-        service.context.primaryNavigation.currentPage = _currentPagePrimary;
         service.context.primaryNavigation.section = _sectionPrimary;
 
     };

@@ -77,7 +77,7 @@
 // Since the typical default browser font-size is 16px, that makes the calculation for grid size.
 // If you want your base font-size to be different and not have it affect the grid breakpoints,
 // set $rem-base to $base-font-size and make sure $base-font-size is a px value.
-// $base-font-size: 100%;
+ $base-font-size: 120%;
 
 // $base-line-height is 24px while $base-font-size is 16px
 // $base-line-height: 1.5;
@@ -90,9 +90,9 @@
 // $font-weight-bold: bold;
 
 // We use these to control various global styles
-// $body-background: #fff;
-// $body-font-color: #222;
-// $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+ $body-background: #262626;
+ $body-font-color: #B8B097;
+ $body-font-family: 'Open Sans', sans-serif;
 // $body-font-weight: $font-weight-normal;
 // $body-font-style: normal;
 // $body-antialiased: true;
@@ -139,7 +139,7 @@
 // $header-font-family: $body-font-family;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: $font-weight-normal;
-// $header-font-color: #222;
+ $header-font-color: #C0B093;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -173,7 +173,7 @@
 // $small-font-color: scale-color($header-font-color, $lightness: 35%);
 
 // We use these to style paragraphs
-// $paragraph-font-family: inherit;
+ $paragraph-font-family:  'Open Sans', sans-serif;;
 // $paragraph-font-weight: $font-weight-normal;
 // $paragraph-font-size: 1rem;
 // $paragraph-line-height: 1.6;
@@ -233,7 +233,7 @@
 // 5. Grid
 // - - - - - - - - - - - - - - -
 
-// $container-width: rem-calc(900);
+ $container-width: rem-calc(1000);
 // $block-padding: $global-padding;
 // $total-columns: 12;
 // $block-grid-max-size: 6; 
@@ -273,15 +273,15 @@
 // 8. Block List
 // - - - - - - - - - - - - - - -
 
-// $blocklist-background: #fff;
+ $blocklist-background: #858270;
 // $blocklist-fullbleed: true;
 // $blocklist-fontsize: 1rem;
 
-// $blocklist-item-padding: 0.8rem 1rem;
+ $blocklist-item-padding: 0.8rem 1rem;
 // $blocklist-item-color: isitlight($blocklist-background, #000, #fff);
-// $blocklist-item-background-hover: smartscale($blocklist-background, 4.5%);
+ $blocklist-item-background-hover: smartscale($blocklist-background, 5.5%);
 // $blocklist-item-color-disabled: #999;
-// $blocklist-item-border: 1px solid smartscale($blocklist-background, 18.5%);
+ $blocklist-item-border: 1px solid smartscale($blocklist-background, 38.5%);
 
 // $blocklist-item-label-color: scale-color($blocklist-item-color, $lightness: 60%);
 // $blocklist-item-icon-size: 0.8;
@@ -290,7 +290,7 @@
 // $blocklist-header-color: smartscale($blocklist-item-color, 40%);
 // $blocklist-header-uppercase: true;
 
-// $blocklist-check-icons: true; 
+ $blocklist-check-icons: true;
 
 // 9. Button Group
 // - - - - - - - - - - - - - - -
@@ -531,7 +531,7 @@
 // - - - - - - - - - - - - - - -
 
 // $panel-size-horizontal: 300px;
-// $panel-size-vertical: 300px;
+// $panel-size-vertical: 1000px;
 // $panel-padding: 0;
 
 // $panel-background: #fff;

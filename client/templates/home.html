@@ -3,59 +3,42 @@ name: home
 url: /
 ---
 
-<div class="grid-block" ng-controller="MainOptionsCtrl">
+<div class="grid-frame" style="padding: 8px;">
+    <div class="grid-block horizontal" ng-controller="MainOptionsCtrl">
+
+        <div  ng-init="updateSelectedItem(0); "></div>
+        <!-- primary navigation -->
+        <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content primary-nav">
+            <section class="block-list">
+                <ul>
+                    <li ng-repeat="mainNav in layout">
+                        <a ng-click="updateSelectedItem($index);setSelectedItem(null)"  setPanelPosition(context.primaryNavigation.contentType)>{{mainNav.section.name.label}}</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
 
 
-    <div  ng-init="updateSelectedItem(0); "></div>
-    <!-- primary navigation -->
-    <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content">
-        <section class="block-list">
-            <ul>
-                <li ng-repeat="mainNav in layout">
-                    <a   ng-click="updateSelectedItem($index)">{{mainNav.section.name.label}}</a>
+        <!-- secondary navigation -->
+        <div class="small-12 medium-2 small-up-12 messages medium-grid-content " ng-init="setPageIndex(0);">
+            <a class="button secondary expand hide-for-medium" zf-open="sub-nav">Options</a>
+            <section class="block-list" >
+                <li ng-repeat="subNav in layout[context.primaryNavigation.selectedItem].section.secondaryNav">
+                    <a ng-click="setPageIndex($index); setPanelPosition(context.secondaryNavigation.contentType); setSelectedItem($index);" zf-toggle="info" ng-class="{selected: $index === selectedItem}">{{subNav.section.title}}</a>
                 </li>
-            </ul>
-        </section>
-    </div>
-
-
-    <!-- secondary navigation -->
-    <div class="small-12 medium-2 messages grid-content" ng-init="setPageIndex(0)">
-        <a class="button secondary expand hide-for-medium" zf-open="sub-nav">Options</a>
-        <section class="block-list" >
-            <li ng-repeat="subNav in layout[context.primaryNavigation.selectedItem].section.secondaryNav" >
-                <h5 zf-hard-toggle="info"><a ng-click="setPageIndex($index)" >{{subNav.section.title}}</a></h5>
-            </li>
-        </section>
-    </div>
-
-    <!-- main panel -->
-
-
-
-    <div exhibit-panel-right=""
-         update-page="setCurrentPage(context.secondaryNavigation.pageIndex)"
-         my-callback="myCallback()"
-         id="info"
-         position="bottom"
-         class="slow bounceInOut large-8 small-grid-content shrink" >
-        <div  ng-if="context.pageElements.contentType=='text'">
-            <exhibit-text description="{{context.pageElements.html}}" class="grid-frame"></exhibit-text>
+            </section>
         </div>
 
-        <div ng-if="context.pageElements.contentType=='image'" >
-            <exhibit-image url="{{context.pageElements.imageFileName}}" description="{{context.pageElements.currentPage}}" title="{{context.pageElements.imageTitle}}"></exhibit-image>
-        </div>
-        <div ng-if="context.pageElements.contentType=='imageArray'">
-            <exhibit-book-turner title="{{context.pageElements.imageTitle}}" images="context.secondaryNavigation.imageArray"></exhibit-book-turner>
+        <!-- main panel -->
+        <div exhibit-panel=""
+             update-page="setCurrentPage(context.secondaryNavigation.pageIndex)"
+             id="info"
+             panel-position="panelPosition"
+             context="context"
+             class="slow bounceInOut small-grid-content" >
         </div>
 
-        <div ng-if="context.pageElements.contentType=='pagesArray'">
-            <exhibit-book-turner title="{{context.pageElements.imageTitle}}" images="imageArray"></exhibit-book-turner>
-        </div>
 
     </div>
-
-
 </div>
 

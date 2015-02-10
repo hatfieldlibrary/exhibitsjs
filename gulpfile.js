@@ -28,8 +28,9 @@ var sassPaths = [
     'bower_components/foundation-apps/scss'
 ];
 var vendorCss = [
-     'bower_components/slick-carousel/slick/slick.css'
-
+    'bower_components/slick-carousel/slick/slick.css',
+    'bower_components/slick-carousel/slick/slick.css.map',
+    'bower_components/slick-carousel/slick/ajax-loader.gif'
 ];
 var vendorFonts = [
     'bower_components/slick-carousel/slick/fonts/*'
@@ -72,10 +73,6 @@ gulp.task('copy', function() {
         './client/**/*.*',
         '!./client/templates/**/*.*',
         '!./client/assets/{scss,js}/**/*.*'
-    ];
-
-    var bookReader = [
-         './client/assets/jks'
     ];
 
     // Everything in the client folder except templates, Sass, and JS

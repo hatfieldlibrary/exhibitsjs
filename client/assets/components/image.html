@@ -2,12 +2,12 @@
 <div>
     <div class="grid-block small-12" >
         <zf-interchange>
-            <img media="small" src="/assets/images/{{image}}.jpg">
-            <img media="medium" src="/assets/images/{{image}}.jpg">
-            <img media="large" src="/assets/images/{{image}}.jpg" style="max-height: 900px;">
+            <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+            <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+            <img media="large" src="/assets/images/{{context.pageElements.imageFileName}}.jpg" style="max-height: 900px;">
         </zf-interchange>
     </div>
     <div class="grid-block small-12">
-        <p><em>{{title}}</em> {{description}}</p>
+        <p><em>{{context.secondaryNavigation.section.title}}</em> {{context.pageElements.imageDescription}}</p>
     </div>
 </div>
