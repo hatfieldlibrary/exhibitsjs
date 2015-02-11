@@ -1,15 +1,15 @@
-<div class="panel grid-frame"
+<div class="panel grid-block"
      ng-class="positionClass"
         >
     <!-- padding prevents occasional flicker as image loads -->
-    <div class="small-12" style="padding-top: 7px;">
+    <div class="grid-content" style="padding-top: 7px;">
 
         <div  ng-if="context.pageElements.contentType=='text'" class="grid-container contain-left">
-            <ng-include src="'/assets/components/text.html'"  class="grid-frame"></ng-include>
+            <ng-include src="'assets/components/text.html'"  class="grid-frame"></ng-include>
         </div>
 
         <div ng-if="context.pageElements.contentType=='image'">
-            <div ng-include="" src="'/assets/components/image.html'" ></div>
+            <div ng-include="" src="'assets/components/image.html'" ></div>
         </div>
 
         <div ng-if="context.pageElements.contentType=='pagesArray'">

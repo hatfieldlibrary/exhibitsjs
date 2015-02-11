@@ -1,13 +1,15 @@
 
-<div class="grid-block vertical small-12 medium-12 large-9">
-    <div class="grid-block" >
-        <zf-interchange>
-            <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
-            <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
-            <img media="large" src="/assets/images/{{context.pageElements.imageFileName}}.jpg" style="max-height: 900px;">
-        </zf-interchange>
-    </div>
-    <div class="grid-block">
-        <p><em>{{context.pageElements.title}}</em>, {{context.pageElements.imageDescription}}</p>
-    </div>
+<div class="grid-block vertical small-12 medium-12 large-12">
+
+        <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
+       <!-- <zf-interchange> -->
+           <!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+            <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
+       <div>
+            <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg"  style="max-height: 900px;">
+           </div>
+     <!--   </zf-interchange>-->
+
+        <div><p class="grid-content"><em>{{context.pageElements.title}}</em>, {{context.pageElements.imageDescription}}</p></div>
+
 </div>

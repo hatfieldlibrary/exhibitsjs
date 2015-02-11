@@ -11,7 +11,6 @@
         'exhibitServices',
         'exhibitDirectives',
 
-
         //foundation
         'foundation',
         'foundation.core',

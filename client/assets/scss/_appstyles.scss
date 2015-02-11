@@ -1,7 +1,3 @@
-.text-holder {
-  background: #eee58b !important;
-  opacity: 0.5;
-}
 
 .block-list li  {
   font-family: 'Raleway', sans-serif;
@@ -15,7 +11,7 @@
   border-top: none;
 }
 .block-list li > a, .block-list li > span, .block-list li > label {
-  height: 120px;
+  height: 100px;
   color: #CBBB92;
   background: rgba(97, 63, 45, 0.6);
   border-bottom: 1px solid #262626;
@@ -43,4 +39,14 @@
 
 em {
   color: rgba(139, 120, 88, 1);
+}
+
+.animate-enter {
+  -webkit-transition: 1s linear all; /* Chrome */
+  transition: 1s linear all;
+  opacity: 0;
+}
+
+.animate-enter.animate-enter-active {
+  opacity: 1;
 }

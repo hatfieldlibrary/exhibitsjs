@@ -17,7 +17,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                     label: 'Home',
                     title: ''
                 },
-                startPage: '/assets/html/home.html',
+                startPage: 'assets/html/home.html',
                 type: 'text',
                 secondaryNav: []
 
@@ -30,14 +30,14 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                     label: 'Painting',
                     title: 'Painting and the Influence of William Merritt Chase'
                 },
-                startPage: '/assets/html/startPainting.html',
+                startPage: 'assets/html/startPainting.html',
                 type: 'text',
                 secondaryNav: [
                     {
                         section: {
                             title: 'William Merritt Chase Talk',
                             type: 'text',
-                            html: '/assets/html/sections/chaseTalk.html'
+                            html: 'assets/html/sections/chaseTalk.html'
                         }
                     },
                     {
@@ -85,7 +85,7 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                     label: 'Photography',
                     title: 'Photography and the Camera Club of New York'
                 },
-                startPage: '/assets/html/startPhotography.html',
+                startPage: 'assets/html/startPhotography.html',
                 type: 'text',
                 secondaryNav: [
                     {
@@ -159,15 +159,15 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
                     label: 'Poetry',
                     title: 'Poetry'
                 },
-                startPage: '/assets/html/startPoetry.html',
+                startPage: 'assets/html/startPoetry.html',
                 type: 'text',
                 secondaryNav: [
                     {
                         section: {
                             type: 'image',
-                            title: 'Confusion',
+                            title: 'Immanuel',
                             description: 'poem by Myra Wiggins',
-                            imageFileName: 'Wiggins_Confusion-Triolet'
+                            imageFileName: 'Wiggins_Immanuel'
                         }
                     },
                     {
@@ -261,74 +261,53 @@ exhibitServices.factory('exhibitLayoutFactory', function() {
 
                 name: {
                     label: 'Travel',
-                    title: 'Travel Letters: 1904 and 1954'
+                    title: 'Travel Letters'
                 },
-                startPage: '/assets/html/startTravel.html',
+                startPage: 'assets/html/startTravel.html',
                 type: 'text',
                 secondaryNav: [
                     {
                         section: {
                             title: 'Constantinople and Ephesus, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/constantinople.html'
+                            html: 'assets/html/sections/constantinople.html'
                         }
                     },
                     {
                         section: {
                             title: 'Galilee, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/galilee.html'
+                            html: 'assets/html/sections/galilee.html'
                         }
                     },
                     {
                         section: {
                             title: 'Tiberias and the Sea of Galilee, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/tiberias.html'
+                            html: 'assets/html/sections/tiberias.html'
                         }
                     },
                     {
                         section: {
                             title: 'Pyramids and Bazaars, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/pyramids.html'
+                            html: 'assets/html/sections/pyramids.html'
                         }
                     },
                     {
                         section: {
                             title: 'Saint Peter\’s, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/stpeters.html'
+                            html: 'assets/html/sections/stpeters.html'
                         }
                     },
                     {
                         section: {
                             title: 'Coliseum, 1904',
                             type: 'text',
-                            html: '/assets/html/sections/coliseum.html'
+                            html: 'assets/html/sections/coliseum.html'
                         }
                     },
-                    {
-                        section: {
-                            title: 'Myra to Fred Wiggins, February 18, 1954',
-                            type: 'text',
-                            html: ''
-                        }
-                    },
-                    {
-                        section: {
-                            title: 'Myra to Fred Wiggins and family, March 18, 1954',
-                            type: 'text',
-                            html: ''
-                        }
-                    },
-                    {
-                        section: {
-                            title: 'Wiggins Family Christmas Letter, 1954',
-                            type: 'text',
-                            html: ''
-                        }
-                    }
                 ]
             }
         }

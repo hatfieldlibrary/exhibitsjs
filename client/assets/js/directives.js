@@ -16,7 +16,7 @@ exhibitDirectives.directive('exhibitMainOption', function() {
         restrict: 'EA',
         controller: 'MainOptionsCtrl',
         transclude: false,
-        templateUrl: '/assets/components/option.html'
+        templateUrl: 'assets/components/option.html'
 
     };
 });
@@ -30,7 +30,7 @@ exhibitDirectives.directive('exhibitSecondaryOption', function() {
         restrict: 'E',
         controller: 'MainOptionsCtrl',
         transclude: false,
-        templateUrl: '/assets/components/secondaryoption.html'
+        templateUrl: 'assets/components/secondaryoption.html'
     };
 });
 
@@ -39,7 +39,7 @@ exhibitDirectives.directive('pageCarousel', function() {
         scope: false,
         restrict: 'EA',
         replace: true,
-        templateUrl: '/assets/components/pageTurner.html'
+        templateUrl: 'assets/components/pageTurner.html'
     }
 });
 
@@ -53,7 +53,7 @@ exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', functio
             context: '='
         },
         restrict: 'EA',
-        templateUrl: '/assets/components/exhibitPanel.html',
+        templateUrl: 'assets/components/exhibitPanel.html',
         transclude: true,
         replace: true,
 
