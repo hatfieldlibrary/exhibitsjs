@@ -50,3 +50,17 @@ em {
 .animate-enter.animate-enter-active {
   opacity: 1;
 }
+
+.imagebackground {
+  background: transparent url(../../assets/images/myra_sig.png) no-repeat 55% 15% fixed !important;
+
+}
+
+.text-background {
+  background: $body-background !important;
+}
+
+.add-overflow {
+  overflow-y: scroll;
+}
+

@@ -1,22 +1,22 @@
-<div class="panel grid-block"
-     ng-class="positionClass"
-        >
-    <!-- padding prevents occasional flicker as image loads -->
-    <div class="grid-content" style="padding-top: 7px;">
 
-        <div  ng-if="context.pageElements.contentType=='text'" class="grid-container contain-left">
-            <ng-include src="'assets/components/text.html'"  class="grid-frame"></ng-include>
-        </div>
-
-        <div ng-if="context.pageElements.contentType=='image'">
-            <div ng-include="" src="'assets/components/image.html'" ></div>
-        </div>
-
-        <div ng-if="context.pageElements.contentType=='pagesArray'">
-            <page-carousel></page-carousel>
-        </div>
-
+<div>
+<!-- padding prevents occasional flicker as image loads -->
+<div class=""  ng-if="context.pageElements.contentType=='text'">
+    <div class="large-9" style="padding-top: 8px;">
+        <div ng-include="'assets/components/text.html'"></div>
     </div>
-
 </div>
 
+<div class="" ng-if="context.pageElements.contentType=='image'">
+    <div class="large-9" style="padding-top: 8px;">
+        <div ng-include="" src="'assets/components/image.html'" ></div>
+    </div>
+</div>
+
+<div class="" ng-if="context.pageElements.contentType=='pagesArray'">
+    <div class="large-9" style="padding-top: 8px;">
+        <page-carousel></page-carousel>
+    </div>
+</div>
+
+</div>

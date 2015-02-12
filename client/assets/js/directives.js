@@ -105,7 +105,7 @@ exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', functio
 
                     if (pageType !== undefined) {
                         // delays can be set independently
-                        if (pageType === 'text') { // left exit
+                        if (pageType === 'textinfo') { // left exit
                             delay = {delayIn: 1200, delayOut: 1700}
                         } else {
                             delay = {delayIn: 1000, delayOut: 1700}
@@ -120,10 +120,10 @@ exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', functio
 
                         if (oldPosition != scope.position) {
 
+                         //   element.removeClass('panel-' + oldPosition);
                             oldPosition = scope.position;
-                            scope.positionClass = 'panel-' + scope.position;
-                            element.removeClass('panel-' + oldPosition);
-                            element.addClass('panel-' + scope.position);
+                           // scope.positionClass = 'panel-' + scope.position;
+                          //  element.addClass('panel-' + scope.position);
                             scope.setAnimation();
                             scope.hide();
                             scope.delayedAnimation(delay);

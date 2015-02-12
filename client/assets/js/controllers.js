@@ -6,11 +6,22 @@ var exhibitControllers = angular.module('exhibitControllers', []);
 exhibitControllers.controller('MainOptionsCtrl',
     ['exhibitLayoutFactory','$scope', function(exhibitLayoutFactory, $scope) {
 
-        $scope.layout = exhibitLayoutFactory.layout;
+        $scope.layout = {};
         $scope.context = {};
         $scope.panelPosition = {position:'bottom'};
         $scope.selectedItem = null;
         $scope.selectedPrimary = null;
+        $scope.showBackgroundImage = true;
+
+
+        $scope.init = exhibitLayoutFactory.init(function(layout) {
+
+            $scope.layout = layout;
+            exhibitLayoutFactory.updateSelectedItem(0);
+            $scope.context = exhibitLayoutFactory.context;
+
+        });
+
 
         $scope.setPageIndex = function (position) {
 
@@ -19,6 +30,7 @@ exhibitControllers.controller('MainOptionsCtrl',
 
         };
 
+
         $scope.setCurrentPage = function (position) {
 
             exhibitLayoutFactory.setCurrentPage(position);
@@ -26,12 +38,13 @@ exhibitControllers.controller('MainOptionsCtrl',
 
         };
 
+
         $scope.updateSelectedItem = function(position) {
 
             exhibitLayoutFactory.updateSelectedItem(position);
             $scope.context = exhibitLayoutFactory.context;
-
         };
+
 
         $scope.setPanelPosition = function(type) {
 
@@ -41,14 +54,20 @@ exhibitControllers.controller('MainOptionsCtrl',
                 $scope.panelPosition.position = 'right';
             }
 
-        } ;
-
-        $scope.setSelectedItem = function(index) {
-            $scope.selectedItem = index;
         };
 
+
+        $scope.setSelectedItem = function(index) {
+
+            $scope.selectedItem = index;
+
+        };
+
+
         $scope.setSelectedPrimary = function(index) {
+
             $scope.selectedPrimary = index;
+
         };
 
     }]);
