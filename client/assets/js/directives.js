@@ -6,35 +6,8 @@
 
 var exhibitDirectives  = angular.module('exhibitDirectives', []);
 
-exhibitDirectives.directive('exhibitMainOption', function() {
 
-    return {
-        scope: {
-            mainNav: '=',
-            index: '@'
-        },
-        restrict: 'EA',
-        controller: 'MainOptionsCtrl',
-        transclude: false,
-        templateUrl: 'assets/components/option.html'
-
-    };
-});
-
-exhibitDirectives.directive('exhibitSecondaryOption', function() {
-
-    return {
-        scope: {
-            section: '='
-        },
-        restrict: 'E',
-        controller: 'MainOptionsCtrl',
-        transclude: false,
-        templateUrl: 'assets/components/secondaryoption.html'
-    };
-});
-
-exhibitDirectives.directive('pageCarousel', function() {
+exhibitDirectives.directive('exPageCarousel', function() {
     return {
         scope: false,
         restrict: 'EA',
@@ -43,18 +16,50 @@ exhibitDirectives.directive('pageCarousel', function() {
     }
 });
 
-exhibitDirectives.directive('exhibitPanel', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
+exhibitDirectives.directive('exbImage', function() {
+    console.log('exbImage');
+    return {
+        scope: {
+            context: '='
+        },
+        restrict: 'EA',
+        replace: true,
+        templateUrl: 'assets/components/image.html'
+    }
+});
+
+
+exhibitDirectives.directive('exbText', function() {
+    return {
+        scope: false,
+        restrict: 'EA',
+        replace: true,
+        templateUrl: 'assets/components/pageTurner.html'
+    }
+});
+
+exhibitDirectives.directive('exbTextAndImage', function() {
+    return {
+        scope: false,
+        restrict: 'EA',
+        replace: true,
+        templateUrl: 'assets/components/pageTurner.html'
+    }
+});
+
+exhibitDirectives.directive('exbPanel', ['FoundationApi','$timeout', function(foundationApi, $timeout) {
 
     return {
         scope: {
             panelPosition: '=',
             pageIndex: '@',
+            citationType: '@',
             updatePage: '&',
             context: '='
         },
         restrict: 'EA',
         templateUrl: 'assets/components/exhibitPanel.html',
-        transclude: true,
+        transclude: false,
         replace: true,
 
         // The compile function is based on Foundation for Apps

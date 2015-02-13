@@ -1,14 +1,19 @@
+<div>
 
+        <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
+       <!-- <zf-interchange> -->
+           <!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+            <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
+       <div>
+            <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg"  style="max-height: 900px;">
+           </div>
+     <!--   </zf-interchange>-->
 
+        <div ng-if="context.pageElements.citationType === 'artwork'">
+            <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
+        </div>
+        <div ng-if="context.pageElements.citationType === 'document'">
+            <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
+        </div>
 
-<!-- zf-interchange throwing error in console, perhaps because images are indentical -->
-<!-- <zf-interchange> -->
-<!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
- <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
-<div class="text-background" style="padding-right: 20px;">
-    <img  media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg"  style="max-height: 900px;">
 </div>
-<!--   </zf-interchange>-->
-
-<p ><em>{{context.pageElements.title}}</em>, {{context.pageElements.imageDescription}}</p>
-
