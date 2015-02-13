@@ -1,19 +1,21 @@
-<div>
+<div class="block-block">
 
-        <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
-       <!-- <zf-interchange> -->
-           <!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
-            <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
-       <div>
-            <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg"  style="max-height: 900px;">
-           </div>
-     <!--   </zf-interchange>-->
+    <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
+    <!-- <zf-interchange> -->
+    <!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+     <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
 
-        <div ng-if="context.pageElements.citationType === 'artwork'">
+    <div class="grid-content">
+    <div class="card" style="background: transparent !important; border: none; color: #B8B097;box-shadow: none;">
+        <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg"  >
+        <!--   </zf-interchange>-->
+
+        <div class="card-section large-7" ng-if="context.pageElements.citationType === 'artwork'">
             <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
         </div>
-        <div ng-if="context.pageElements.citationType === 'document'">
+        <div class="card-section" ng-if="context.pageElements.citationType === 'document'">
             <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
         </div>
-
+    </div>
+    </div>
 </div>
