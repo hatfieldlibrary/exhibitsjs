@@ -1,10 +1,15 @@
 
+.primary-nav .block-list {
+  margin-left: -0.5rem;
+  margin-right: -1rem;
+}
 .block-list li  {
   font-family: 'Raleway', sans-serif;
   margin-top: 5px;
   background: rgba(89, 52, 32, 0.9);
   border-bottom: 1px solid #262626;
   border-radius: 10px;
+
   color: #eee;
 }
 .block-list li:first-child {

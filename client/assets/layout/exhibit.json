@@ -193,18 +193,10 @@
         },
         {
           "section": {
+            "type": "image",
             "title": "The Lost Butterfly",
-            "type": "pagesArray",
-            "imageArray": [
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly",
-                "description": "Page one"
-              },
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly_back",
-                "description": "Page two"
-              }
-            ]
+            "description": "poem by Myra Wiggins",
+            "imageFileName": "Wiggins_The-Lost-Butterfly"
           }
         },
         {

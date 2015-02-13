@@ -4,14 +4,18 @@ url: /
 ---
 
 
-<div style="padding-left: 8px;" ng-controller="MainOptionsCtrl" >
 
-    <div  ng-init="init();setSelectedPrimary(0); "></div>
-    <div class="medium-grid-block horizontal">
+
+
+    <div ng-controller="MainOptionsCtrl"  class="medium-grid-block" ng-init="init();setSelectedPrimary(0);" style="padding-left: 8px;" >
         <!-- primary navigation -->
-        <div zf-panel position="left" id="sub-nav" class="fast bounceInOut medium-2 medium-grid-content columns panel panel-left primary-nav" zf-closable="panel">
+        <div zf-panel position="left" id="prim-nav" class="fast bounceInOut medium-2 medium-grid-content columns panel panel-left primary-nav" position="left" zf-closable="panel">
             <section class="block-list">
                 <ul>
+                    <li class="hide-for-medium">
+                        <img src="http://placehold.it/1x1" alt="">
+                        <a zf-close="prim-nav">Close</a>
+                    </li>
                     <li ng-repeat="mainNav in layout.components">
                         <a ng-click="updateSelectedItem($index);setSelectedItem(null);setSelectedPrimary($index);setPanelPosition(context.primaryNavigation.contentType)" ng-class="{selected: $index === selectedPrimary}">{{mainNav.section.name.label}}</a>
                     </li>
@@ -21,13 +25,26 @@ url: /
 
 
         <!-- secondary navigation -->
-        <div class="small-12 medium-2 messages grid-content ng-scope columns"  ng-init="setPageIndex(0);">
+        <div  class="show-for-medium small-12 medium-2 messages grid-content ng-scope" ng-init="setPageIndex(0);" style="z-index: 1000 !important;">
             <a class="button secondary hide-for-medium" zf-open="sub-nav">Options</a>
-            <section class="block-list" >
+            <section class="block-list">
                 <li ng-repeat="subNav in layout.components[context.primaryNavigation.selectedItem].section.secondaryNav">
                     <a ng-click="setPageIndex($index); setPanelPosition(context.secondaryNavigation.contentType); setSelectedItem($index);" zf-toggle="info" ng-class="{selected: $index === selectedItem}">{{subNav.section.title}}</a>
                 </li>
             </section>
+        </div>
+
+        <div zf-panel position="right" id="sub-nav" class="show-for-small-only  small-12  messages grid-content ng-scope panel panel-right" zf-closeable="panel" ng-init="setPageIndex(0);">
+            <section class="block-list" >
+                <li>
+                    <img src="http://placehold.it/1x1" alt="">
+                    <a zf-toggle="sub-nav">Close</a>
+                </li>
+                <li ng-repeat="subNav in layout.components[context.primaryNavigation.selectedItem].section.secondaryNav">
+                    <a ng-click="setPageIndex($index); setPanelPosition(context.secondaryNavigation.contentType); setSelectedItem($index);" zf-toggle="info" ng-class="{selected: $index === selectedItem}">{{subNav.section.title}}</a>
+                </li>
+            </section>
+
         </div>
 
         <!-- main panel -->
@@ -39,6 +56,6 @@ url: /
              class="slow bounceInOut medium-grid-content" >
         </div>
     </div>
-</div>
+
 
 
