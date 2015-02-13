@@ -36,17 +36,23 @@
         },
         {
           "section": {
-            "title": "Self-Portrait of William Merritt Chase",
             "type": "image",
-            "description": "oil on canvas, William Merritt Chase, artist.",
+            "title": "Self-Portrait",
+            "creator": "William Merritt Chase",
+            "date": "c. 1914",
+            "citationType": "artwork",
+            "description": "Oil on canvas. The Detroit Institute of Arts",
             "imageFileName": "AMICO_DETROIT_1039543998"
           }
         },
         {
           "section": {
             "type": "image",
-            "title": "Studio Interior",
-            "description": "William Merritt Chase, artist, ca 1882.",
+            "title": "In the Studio",
+            "creator": "William Merrit Chase",
+            "date": "c. 1880",
+            "citationType": "artwork",
+            "description": "Oil on canvas.  Brooklyn Museum",
             "imageFileName": "Chase_Studio_Interior"
           }
         },
@@ -54,7 +60,10 @@
           "section": {
             "type": "image",
             "title": "William Merritt Chase's Painting Class",
-            "description": "Art Students League New York, 1891-92, Myra Albert, photographer.",
+            "creator": " Myra Albert",
+            "date": "1891-92",
+            "citationType": "artwork",
+            "description": "Photograph",
             "imageFileName": "Chase_Painting_Class"
           }
         },
@@ -62,7 +71,9 @@
           "section": {
             "type": "image",
             "title": "Corner of My Studio 2",
-            "description": "Myra Albert Wiggins, artist.",
+            "creator": "Myra Albert Wiggins",
+            "description": "Oil on Canvas",
+            "citationType": "artwork",
             "imageFileName": "Corner_of_my_studio"
           }
         }
@@ -86,15 +97,17 @@
         {
           "section": {
             "title": "Amateur Photography Through Women's Eyes",
+            "creator": "Myra Wiggins",
             "type": "image",
-            "imageTitle": "",
-            "description": "Page one",
+            "citationType": "document",
+            "description": "The Photo-American",
             "imageFileName": "Amateur_Photography"
           }
         },
         {
           "section": {
             "title": "Genre Photography",
+            "creator": "Myra Wiggins",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -116,6 +129,9 @@
         {
           "section": {
             "title": "Trials and Triumphs of an Amateur Photographer",
+            "creator": "Myra Wiggins",
+            "date": "September, 1926",
+            "description": "The American Magazine of Art",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -162,13 +178,16 @@
           "section": {
             "type": "image",
             "title": "Immanuel",
-            "description": "poem by Myra Wiggins",
+            "creator": "Myra Wiggins",
+            "citationType": "document",
+            "description": "Pacific Northwest Artists Collection",
             "imageFileName": "Wiggins_Immanuel"
           }
         },
         {
           "section": {
             "title": "My Sweetheart",
+            "creator": "Myra Wiggins",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -186,14 +205,17 @@
         {
           "section": {
             "type": "image",
-            "title": "Spring\"s Resurrection",
-            "description": "poem by Myra Wiggins",
+            "title": "Spring's Resurrection",
+            "creator": "Myra Wiggins",
+            "citationType": "document",
+            "description": "Pacific Northwest Artists Collection",
             "imageFileName": "Wiggins_Spring's-Resurrection"
           }
         },
         {
           "section": {
             "title": "The Lost Butterfly",
+            "creator": "Myra Wiggins",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -211,7 +233,9 @@
           "section": {
             "type": "image",
             "title": "The Star",
-            "description": "poem by Myra Wiggins",
+            "creator": "Myra Wiggins",
+            "citationType": "document",
+            "description": "Pacific Northwest Artists Collection",
             "imageFileName": "Wiggins_The-Star"
           }
         },
@@ -219,7 +243,9 @@
           "section": {
             "type": "image",
             "title": "Two Feasts",
-            "description": "poem by Myra Wiggins",
+            "creator": "Myra Wiggins",
+            "citationType": "document",
+            "description": "Pacific Northwest Artists Collection",
             "imageFileName": "Wiggins_Two-Feasts"
           }
         },
@@ -227,13 +253,16 @@
           "section": {
             "type": "image",
             "title": "Whistling Swan",
-            "description": "poem by Myra Wiggins",
+            "creator": "Myra Wiggins",
+            "citationType": "document",
+            "description": "Pacific Northwest Artists Collection",
             "imageFileName": "Wiggins_Whistling-Swan"
           }
         },
         {
           "section": {
             "title": "Youth's Flowering Field",
+            "creator": "Myra Wiggins",
             "type": "pagesArray",
             "imageArray": [
               {

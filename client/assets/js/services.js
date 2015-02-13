@@ -33,7 +33,13 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
 
     var _currentPagePrimary;
 
-    var _imageDescription;
+    var _description;
+
+    var _date;
+
+    var _creator;
+
+    var _citationType;
 
     var service = {};
 
@@ -69,7 +75,10 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         pageElements: {
             imageFileName: '',
             title: '',
-            imageDescription: '',
+            creator: '',
+            date: '',
+            description: '',
+            citationType: '',
             html: '',
             imageArray: '',
             contentType: ''
@@ -122,8 +131,11 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         _imageFileName = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageFileName;
         _currentPage =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.html;
         _imageTitle = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.title;
-        _imageDescription =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.description;
+        _description =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.description;
         _contentType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.type;
+        _date = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.date;
+        _creator = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.creator;
+        _citationType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.citationType;
         if (layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray != null) {
             _imageArray = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray;
         } else {
@@ -134,9 +146,13 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         service.context.pageElements.html = _currentPage;
         service.context.pageElements.imageArray = _imageArray;
         service.context.pageElements.imageFileName = _imageFileName;
-        service.context.pageElements.title = _imageTitle;
-        service.context.pageElements.imageDescription = _imageDescription;
         service.context.pageElements.contentType = _contentType;
+        service.context.pageElements.citationType = _citationType;
+        service.context.pageElements.title = _imageTitle;
+        service.context.pageElements.description = _description;
+        service.context.pageElements.creator = _creator;
+        service.context.pageElements.date = _date;
+
 
     };
 
@@ -158,6 +174,8 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         service.context.pageElements.contentType = _contentTypePrimary;
         service.context.pageElements.title = _currentTitlePrimary;
         service.context.pageElements.html = _currentPagePrimary;
+        service.context.pageElements.citationType = _citationType;
+
         // primary elements
         service.context.primaryNavigation.contentCategory = _contentCategoryPrimary;
         service.context.primaryNavigation.selectedItem = _selectedItemPrimary;

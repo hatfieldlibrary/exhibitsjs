@@ -1,22 +1,24 @@
 
 <div>
-<!-- padding prevents occasional flicker as image loads -->
-<div class=""  ng-if="context.pageElements.contentType=='text'">
-    <div class="large-9" style="padding-top: 8px;">
-        <div ng-include="'assets/components/text.html'"></div>
+    <!-- padding prevents occasional flicker as image loads -->
+    <div class=""  ng-if="context.pageElements.contentType=='text'">
+        <div class="large-9" style="padding-top: 8px;">
+            <div ng-include="'assets/components/text.html'"></div>
+        </div>
     </div>
-</div>
 
-<div class="" ng-if="context.pageElements.contentType=='image'">
-    <div class="large-9" style="padding-top: 8px;">
-        <div ng-include="" src="'assets/components/image.html'" ></div>
-    </div>
-</div>
+    <div class="" ng-if="context.pageElements.contentType=='image'">
 
-<div class="" ng-if="context.pageElements.contentType=='pagesArray'">
-    <div class="large-9" style="padding-top: 8px;">
-        <page-carousel></page-carousel>
+        <div class="large-9" style="padding-top: 8px;">
+            <exb-image context="context"></div>
     </div>
-</div>
+
+
+    <div class="" ng-if="context.pageElements.contentType=='pagesArray'">
+        <div class="large-9" style="padding-top: 8px;">
+            <page-carousel></page-carousel>
+        </div>
+    </div>
+
 
 </div>

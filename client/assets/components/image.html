@@ -1,4 +1,4 @@
-
+<div>
 
 
         <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
@@ -10,5 +10,11 @@
            </div>
      <!--   </zf-interchange>-->
 
-        <p ><em>{{context.pageElements.title}}</em>, {{context.pageElements.imageDescription}}</p>
+        <div ng-if="context.pageElements.citationType === 'artwork'">
+            <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
+        </div>
+        <div ng-if="context.pageElements.citationType === 'document'">
+            <p >{{context.pageElements.creator}}. <em>{{context.pageElements.title}}</em>. {{context.pageElements.date}}. {{context.pageElements.description}}.</p>
+        </div>
 
+</div>
