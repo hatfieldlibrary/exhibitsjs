@@ -3,7 +3,7 @@
 
     <h3>{{context.pageElements.title}}</h3>
 
-    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" arrows="false" slides-to-show="1" slides-to-scroll="1" dots="true" >
+    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" arrows="false" slides-to-show="1" slides-to-scroll="2" dots="true" >
         <div ng-repeat="image in context.pageElements.imageArray">
             <img  data-lazy="assets/images/{{image.imageFileName}}.jpg" style="max-height: 900px;">
         </div>
