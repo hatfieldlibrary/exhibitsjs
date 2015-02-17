@@ -1,9 +1,9 @@
 # Museum Exhibit Builder App
 
-This project is intended to make it easy for truly novice web developers to create museum exhibit kiosks that are single page JavaScript applications.
+This project makes it easy for novice web developers to create sophisticated museum exhibit kiosks implemented as single page JavaScript applications.
 
-The individual creating a new exhibit must be able to translate a content outline into a JSON template, modify image sizes and copy images into an image directory,
-and create basic html files that typically require only paragraph tags. The application uses this information to build an AngularJS single page application.  The
+The person creating a new exhibit must be able to translate a basic content outline into a JSON template, modify image sizes and copy images into an image directory,
+and create basic html files (that typically require only paragraph tags). The application uses this information to build an AngularJS single page application.  The
 application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
 
 This version of the application provides only a single exhibit template.  Alternate exhibit templates can be defined using AngularJS routes, custom directives, and styling.
@@ -72,7 +72,13 @@ When you are ready to publish your exhibit, just copy the contents of the `build
 
 ## Advanced Customization
 
-All the tools for creating additional AngularJS templates, components, controllers and directives are available.  Styles are defined in the `scss` directory. Use the settings and create your own styles and mixin's here.  The contents of the scss directory
+
+
+The applications `index.html` page includes Google font downloads and some simple header content that can be customized per exhibit.
+
+All the tools for creating additional AngularJS templates, components, controllers and directives are available.  Rather than overwrite existing templates, it's recommended that you use AngularJS routing to define and create your own templates.
+
+Exhibit styles are defined in the `scss` directory. Use the settings and create your own styles and mixin's here.  The contents of the scss directory
 will be compiled into your exhibit css.
 
 For more information, see:
