@@ -14,11 +14,9 @@ This version of the application provides only one exhibit template.  Alternate e
 
 ## Foundation for Apps Requirements
 
-The project uses <a href="http://foundation.zurb.com/apps/">Foundation for Apps</a>. These requirements must be installed on your system.
+The project uses <a href="http://foundation.zurb.com/apps/">Foundation for Apps</a>. To use the exhibit builder app, you'll need the following installed on your system.
 
 ### Requirements
-
-You'll need the following software installed to get started.
 
   * [Node.js](http://nodejs.org): Use the installer provided on the NodeJS website.
   * [Git](http://git-scm.com/downloads): Use the installer for your OS.
@@ -28,7 +26,7 @@ You'll need the following software installed to get started.
   * [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `[sudo] npm install -g gulp bower`
 
 
-## Installation
+## Install the Exhibit Builder
 
 Clone or copy the contents of this repository to your system. Change into the project's base directory.  Then install the project dependencies by executing the following commands:
 
@@ -40,7 +38,7 @@ Once this is done, you can launch the sample exhibit typing `gulp` on the comman
    `http://localhost:8080/#!/`
 
 
-## Building your Exhibit
+## Building your own Exhibit
 
 You will find exhibit folders here:
 
@@ -73,8 +71,6 @@ When you are ready to publish your exhibit, just copy the contents of the `build
 
 
 ## Advanced Customization
-
-
 
 The applications `index.html` page includes Google font downloads and some simple header content that can be customized per exhibit.
 
