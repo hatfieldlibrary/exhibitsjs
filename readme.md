@@ -3,18 +3,18 @@
 This project makes it easy for novice web developers to create sophisticated museum exhibit kiosks implemented as single page JavaScript applications.
 
 The person creating a new exhibit must be able to translate their content outline into a JSON template, create basic html files (that typically require only paragraph tags),
-and finally resize and copy images into an image directory. The application uses this information to build an AngularJS single page application. For novices, this work is a brief
+and finally resize and copy images into an image directory. The application uses this information to build an <a href="https://angularjs.org/">Angular.js</a> single page application. For novices, this work is a brief
 introduction to how the web works.
 
-The application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
+The application is built using the<a href="http://foundation.zurb.com/apps/"> Foundation for Apps</a> web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
 
-This version of the application provides only one exhibit template.  Alternate exhibit templates can be defined using AngularJS routes, custom directives, and styling.
+This version of the application provides only one exhibit template.  Alternate exhibit templates can be defined using Angular.js routes, custom directives, and styling.
 
 
 
 ## Foundation for Apps Requirements
 
-This project uses Foundation for Apps. These requirements must be installed on your system.
+The project uses <a href="http://foundation.zurb.com/apps/">Foundation for Apps</a>. These requirements must be installed on your system.
 
 ### Requirements
 
@@ -78,7 +78,7 @@ When you are ready to publish your exhibit, just copy the contents of the `build
 
 The applications `index.html` page includes Google font downloads and some simple header content that can be customized per exhibit.
 
-All the tools for creating additional AngularJS templates, components, controllers and directives are available.  Rather than overwrite existing templates, it's recommended that you use AngularJS routing to define and create your own templates.
+All the tools for creating additional Angular.js templates, components, controllers and directives are available.  Rather than overwrite existing templates, it's recommended that you use AngularJS routing to define and create your own templates.
 
 Exhibit styles are defined in the `scss` directory. Use the settings and create your own styles and mixin's here.  The contents of the scss directory
 will be compiled into your exhibit css.
