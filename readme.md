@@ -54,7 +54,8 @@ sections define page content.  Here's the basic structure:
 <pre>section
  \_ page data
  \_ secondary navigation
-    \_ page data</pre>
+    \_ section
+        \_ page data</pre>
 
 The exhibit currently supports 3 kinds of page data:
 
