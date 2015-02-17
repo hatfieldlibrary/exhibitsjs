@@ -2,11 +2,13 @@
 
 This project makes it easy for novice web developers to create sophisticated museum exhibit kiosks implemented as single page JavaScript applications.
 
-The person creating a new exhibit must be able to translate a basic content outline into a JSON template, modify image sizes and copy images into an image directory,
-and create basic html files (that typically require only paragraph tags). The application uses this information to build an AngularJS single page application.  The
-application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
+The person creating a new exhibit must be able to translate their content outline into a JSON template, create basic html files (that typically require only paragraph tags),
+and resize and them copy images into an image directory. The application uses this information to build an AngularJS single page application. For novices, this is an
+introduction to how the web works.
 
-This version of the application provides only a single exhibit template.  Alternate exhibit templates can be defined using AngularJS routes, custom directives, and styling.
+The application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
+
+This version of the application provides only one exhibit template.  Alternate exhibit templates can be defined using AngularJS routes, custom directives, and styling.
 
 
 
@@ -26,7 +28,7 @@ You'll need the following software installed to get started.
   * [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `[sudo] npm install -g gulp bower`
 
 
-### Installation
+## Installation
 
 Clone or copy the contents of this repository to your system. Change into the project's base directory.  Then install the project dependencies by executing the following commands:
 
