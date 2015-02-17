@@ -1,24 +1,23 @@
 
 <div>
     <!-- padding prevents occasional flicker as image loads -->
-    <div class=""  ng-if="context.pageElements.contentType=='text'">
-        <div class="large-9" style="padding-top: 8px;">
-            <div ng-include="'assets/components/text.html'"></div>
+    <div class="grid-block" ng-if="context.pageElements.contentType=='text'">
+        <div class="grid-content" style="padding-top: 8px;">
+            <exb-text class="small-12 large-9" ></exb-text>
         </div>
     </div>
 
     <div class="" ng-if="context.pageElements.contentType=='image'">
 
-        <div class="large-9" style="padding-top: 8px;">
+        <div class="grid-content" style="padding-top: 8px;">
             <exb-image context="context"></div>
     </div>
 
 
-    <div class="" ng-if="context.pageElements.contentType=='pagesArray'">
-        <div class="large-9" style="padding-top: 8px;">
-            <page-carousel></page-carousel>
+    <div class="grid-content" ng-if="context.pageElements.contentType=='pagesArray'">
+        <div  style="padding-top: 8px;">
+            <exb-page-carousel></exb-page-carousel>
         </div>
     </div>
-
 
 </div>

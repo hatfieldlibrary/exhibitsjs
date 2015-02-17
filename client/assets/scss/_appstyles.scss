@@ -1,4 +1,43 @@
+body {
+  -ms-content-zooming: none !important;
+}
 
+
+#mobile-prim-nav .block-list {
+  margin-bottom: 0;
+}
+#mobile-prim-nav .block-list li > a, .block-list li > span, .block-list li > label {
+  height: auto;
+  color: #CBBB92;
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #858585;
+  border-radius: 0;
+
+}
+
+
+#mobile-prim-nav  .block-list li {
+  padding-left: 0.5rem;
+  background: rgba(171, 171, 162, 0.81);
+  border-radius: 0;
+  margin-top: 0;
+
+}
+
+#mobile-prim-nav .block-list li > a.selected  {
+  background: rgba(163, 163, 155, 0.93) !important;
+  color: #3a312a !important;
+}
+
+#mobile-prim-nav .block-list li .block-list li > a.selected  {
+  background: #bbbbb2 !important;
+  color: #3a312a !important;
+}
+
+.primary-nav .block-list {
+  margin-left: -0.5rem;
+  margin-right: -1rem;
+}
 .block-list li  {
   font-family: 'Raleway', sans-serif;
   margin-top: 5px;
@@ -13,20 +52,22 @@
 .block-list li > a, .block-list li > span, .block-list li > label {
   height: 100px;
   color: #CBBB92;
-  background: rgba(97, 63, 45, 0.6);
+  background: rgba(118, 62, 32, 0.89);
   border-bottom: 1px solid #262626;
-  border-radius: 10px;
+  border-radius: 7px;
 }
 
 .primary-nav .block-list li > a, .block-list li > span, .block-list li > label {
-   background-color: #A19079;
+
+  background-color: #A19079;
   border-bottom: 1px solid #262626;
-  border-radius: 5px;
+  border-radius: 7px;
   color: #2e2520 !important;
 }
 
-.selected {
-  background: #7B6B4F !important;
+.block-list li > a.selected  {
+  background: #846C42 !important;
+  color: #3a312a !important;
 }
 
 .primary-nav .block-list li {
@@ -41,26 +82,31 @@ em {
   color: rgba(139, 120, 88, 1);
 }
 
-.animate-enter {
-  -webkit-transition: 1s linear all; /* Chrome */
-  transition: 1s linear all;
-  opacity: 0;
-}
-
-.animate-enter.animate-enter-active {
-  opacity: 1;
-}
-
-.imagebackground {
-  background: transparent url(../../assets/images/myra_sig.png) no-repeat 55% 15% fixed !important;
-
-}
-
 .text-background {
   background: $body-background !important;
 }
 
 .add-overflow {
   overflow-y: scroll;
+}
+
+@media screen and (min-width: 1765px) {
+  .imagebackground {
+    background: transparent url(../../assets/images/myra_sig.png) no-repeat 54% 20% fixed !important;
+
+  }
+}
+
+@media screen and (max-width: 1230px) {
+  .block-list li > a, .block-list li > span, .block-list li > label {
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .block-list li > a, .block-list li > span, .block-list li > label {
+    font-size: 0.8em;
+    height: auto;
+  }
 }
 

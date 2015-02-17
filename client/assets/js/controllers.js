@@ -49,9 +49,9 @@ exhibitControllers.controller('MainOptionsCtrl',
         $scope.setPanelPosition = function(type) {
 
             if (type === 'image') {
-                $scope.panelPosition.position = 'bottom';
-            } else if (type === 'text' || type === 'pagesArray') {
                 $scope.panelPosition.position = 'right';
+            } else if (type === 'text' || type === 'pagesArray') {
+                $scope.panelPosition.position = 'bottom';
             }
 
         };
@@ -69,5 +69,20 @@ exhibitControllers.controller('MainOptionsCtrl',
             $scope.selectedPrimary = index;
 
         };
+
+
+
+    }]);
+
+
+exhibitControllers.controller('CitationsCtrl',
+    ['$scope', function( $scope) {
+
+        $scope.addDelimiter = function(text) {
+
+            if (text !== undefined && text.length > 0) {
+                return ". ";
+            }
+        }
 
     }]);

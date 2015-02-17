@@ -1,12 +1,19 @@
 
-<div class="  text-background" style="padding-left: 30px; padding-right: 30px;">
+<div class="text-background" style="padding-left: 30px; padding-right: 30px;">
 
-    <h3>{{context.pageElements.title}}</h3>
-
-    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" arrows="false" slides-to-show="1" slides-to-scroll="2" dots="true" >
+    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" fade="false"  arrows="true" slides-to-show="2" slides-to-scroll="2" dots="true" >
         <div ng-repeat="image in context.pageElements.imageArray">
-            <img  data-lazy="assets/images/{{image.imageFileName}}.jpg" style="max-height: 900px;">
+            <img  data-lazy="assets/images/{{image.imageFileName}}.jpg" style="max-height: 850px;max-width: 600px;">
         </div>
     </slick>
+    <p>
+        {{context.pageElements.creator}}{{addDelimiter(context.pageElements.creator)}}
+
+        <em>{{context.pageElements.title}}</em>{{addDelimiter(context.pageElements.title)}}
+
+        {{context.pageElements.date}}{{addDelimiter(context.pageElements.date)}}
+
+        {{context.pageElements.description}}{{addDelimiter(context.pageElements.description)}}
+    </p>
 
 </div>

@@ -60,10 +60,10 @@
           "section": {
             "type": "image",
             "title": "William Merritt Chase's Painting Class",
-            "creator": " Myra Albert",
-            "date": "1891-92",
+            "creator": " Myra Albert Wiggins",
+            "date": "1891",
             "citationType": "artwork",
-            "description": "Photograph",
+            "description": "Gelatin silver print, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
             "imageFileName": "Chase_Painting_Class"
           }
         },
@@ -71,8 +71,9 @@
           "section": {
             "type": "image",
             "title": "Corner of My Studio 2",
+            "date": "c. 1934",
             "creator": "Myra Albert Wiggins",
-            "description": "Oil on Canvas",
+            "description": "Oil on canvas, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
             "citationType": "artwork",
             "imageFileName": "Corner_of_my_studio"
           }
@@ -188,6 +189,7 @@
           "section": {
             "title": "My Sweetheart",
             "creator": "Myra Wiggins",
+            "description": "Pacific Northwest Artists Collection",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -214,8 +216,10 @@
         },
         {
           "section": {
+            "type": "image",
             "title": "The Lost Butterfly",
             "creator": "Myra Wiggins",
+            "description": "Pacific Northwest Artists Collection",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -263,6 +267,7 @@
           "section": {
             "title": "Youth's Flowering Field",
             "creator": "Myra Wiggins",
+            "description": "Pacific Northwest Artists Collection",
             "type": "pagesArray",
             "imageArray": [
               {

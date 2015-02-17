@@ -90,7 +90,7 @@
 // $font-weight-bold: bold;
 
 // We use these to control various global styles
- $body-background: #262626;
+ $body-background: #181818;
  $body-font-color: #B8B097;
  $body-font-family: 'Open Sans', sans-serif;
 // $body-font-weight: $font-weight-normal;
@@ -104,7 +104,7 @@
 // $info-color: #A0D3E8;
 // $success-color: #43AC6A;
 // $warning-color: #F08A24;
-// $dark-color: #232323;
+ // $dark-color: #232323;
 // $gray: #dfdfdf;
 // $gray-dark: darken($gray, 8);
 // $gray-light: lighten($gray, 8);
@@ -274,12 +274,12 @@
 // - - - - - - - - - - - - - - -
 
  $blocklist-background: #858270;
-// $blocklist-fullbleed: true;
+ $blocklist-fullbleed: false;
 // $blocklist-fontsize: 1rem;
 
  $blocklist-item-padding: 0.8rem 1rem;
 // $blocklist-item-color: isitlight($blocklist-background, #000, #fff);
- $blocklist-item-background-hover: smartscale($blocklist-background, 5.5%);
+ $blocklist-item-background-hover: smartscale($blocklist-background, 10.5%);
 // $blocklist-item-color-disabled: #999;
  $blocklist-item-border: 1px solid smartscale($blocklist-background, 38.5%);
 
@@ -534,7 +534,7 @@
 // $panel-size-vertical: 1000px;
 // $panel-padding: 0;
 
-// $panel-background: #fff;
+ $panel-background: rgba(255, 255, 255, 0.39);
 // $panel-shadow: 3px 0 10px rgba(black, 0.25);
 // $panel-animation-speed: 0.25s; 
 

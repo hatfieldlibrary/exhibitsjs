@@ -7,10 +7,11 @@
 var exhibitDirectives  = angular.module('exhibitDirectives', []);
 
 
-exhibitDirectives.directive('exPageCarousel', function() {
+exhibitDirectives.directive('exbPageCarousel', function() {
     return {
         scope: false,
         restrict: 'EA',
+        controller: 'CitationsCtrl',
         replace: true,
         templateUrl: 'assets/components/pageTurner.html'
     }
@@ -23,6 +24,7 @@ exhibitDirectives.directive('exbImage', function() {
             context: '='
         },
         restrict: 'EA',
+        controller: 'CitationsCtrl',
         replace: true,
         templateUrl: 'assets/components/image.html'
     }
@@ -34,7 +36,7 @@ exhibitDirectives.directive('exbText', function() {
         scope: false,
         restrict: 'EA',
         replace: true,
-        templateUrl: 'assets/components/pageTurner.html'
+        templateUrl: 'assets/components/text.html'
     }
 });
 
