@@ -78,13 +78,14 @@ When you are ready to publish your exhibit, just copy the contents of the `build
 
 The applications `index.html` page includes Google font downloads and some simple header content that can be customized per exhibit.
 
-All the tools for creating additional Angular.js templates, components, controllers and directives are available.  Rather than overwrite existing templates, it's recommended that you use AngularJS routing to define and create your own templates.
+All the tools for creating additional Angular.js templates, components, controllers and directives are available.  Rather than overwrite existing templates, it's recommended that you use Angular.js routing to define and create your own templates.
 
 Exhibit styles are defined in the `scss` directory. Use the settings and create your own styles and mixin's here.  The contents of the scss directory
 will be compiled into your exhibit css.
 
 For more information, see:
 
-     http://foundation.zurb.com/apps/docs/#!/
-     https://angularjs.org/
+  * <a href="http://foundation.zurb.com/apps/docs/#!/">Foundation for Apps documentation</a>
+  * <a href="https://docs.angularjs.org/guide">Angular.js developer guide</a>
+  * <a href="https://docs.angularjs.org/api">Angular.js API reference</a>
 
