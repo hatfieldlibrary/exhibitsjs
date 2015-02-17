@@ -1,13 +1,20 @@
-# Museum Exhibit App
+# Museum Exhibit Builder App
 
-This project will be a single page JavaScript application, written using the new Foundation for apps.  It will be optimized for a touch screen panel that will accompany museum installations.
-It will also be fine to use the exhibit as a permanent addition to the museum website, if that's desired.  The website will be mobile friendly.
+This project is intended to make it easy for truly novice web developers to create museum exhibit kiosks that are single page JavaScript applications.
 
-# Foundation for Apps Template
+The individual creating a new exhibit must be able to translate a content outline into a JSON template, modify image sizes and copy images into an image directory,
+and create basic html files that typically require only paragraph tags. The application uses this information to build an AngularJS single page application.  The
+application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
 
-This is the default template project for Foundation for Apps. It's powered by Node, Gulp, Angular, and libsass. It provides you with a basic template to get started with Angular and Foundation for Apps. If you're already an Angular developer, you may instead want to install the components into your own stack using Bower: `bower install foundation-apps`
+This version of the application provides only a single exhibit template.  Alternate exhibit templates can be defined using AngularJS routes, custom directives, and styling.
 
-## Requirements
+
+
+## Foundation for Apps Requirements
+
+This project uses Foundation for Apps. These requirements must be installed on your system.
+
+### Requirements
 
 You'll need the following software installed to get started.
 
@@ -18,38 +25,58 @@ You'll need the following software installed to get started.
     * With Ruby installed, run `gem install bundler sass`.
   * [Gulp](http://gulpjs.com/) and [Bower](http://bower.io): Run `[sudo] npm install -g gulp bower`
 
-## Get Started
 
-Clone this repository, where `app` is the name of your app.
+### Installation
 
-```bash
-git clone https://github.com/zurb/foundation-apps-template.git app
-```
+Clone or copy the contents of this repository to your system. Change into the project's base directory.  Then install the project dependencies by executing the following commands:
 
-Change into the directory.
+  * npm install
+  * bower install
 
-```bash
-cd app
-```
+Once this is done, you can launch the sample exhibit typing `gulp` on the command line.  This will build the project and start the development server.  To view the sample exhibit, point your web browser to:
 
-Install the dependencies. Running `npm install` will also automatically run `bower install` after. If you're running Mac OS or Linux, you may need to run `sudo npm install` instead, depending on how your machine is configured. Running `bundle` will install the correct version of Sass for the template.
+   `http://localhost:8080/#!/`
 
-```bash
-npm install
-bower install
-bundle
-```
 
-While you're working on your project, run:
+## Building your Exhibit
 
-```bash
-npm start
-```
+You will find exhibit folders here:
 
-This will compile the Sass and assemble your Angular app. **Now go to `localhost:8080` in your browser to see it in action.**
+ * `client/assets/layout/exhibit.json`
+ * `client/assets/images/*`
+ * `client/assets/html/*`
 
-To run the compiling process once, without watching any files:
+These directories currently contain the assets used by the sample exhibit.  You will be modifying the directory content to create your own exhibit.
 
-```bash
-npm start build
-```
+The `exhibit.json` file provides your exhibit structure. It's an array of top-level navigation sections that can in turn contain an array of second-level navigation sections.  Top-level and second-level
+sections define page content.  Here's the basic structure:
+
+<pre>section
+ \_ page data
+ \_ secondary navigation
+    \_ page data</pre>
+
+The exhibit currently supports 3 kinds of page data:
+
+  * images with captions
+  * html
+  * slick carousel for multi-image documents, etc.
+
+For details, see the sample `exhibit.json` file.
+
+
+## Deploying your Exhibit
+
+When you are ready to publish your exhibit, just copy the contents of the `build` directory to your web server.
+
+
+## Advanced Customization
+
+All the tools for creating additional AngularJS templates, components, controllers and directives are available.  Styles are defined in the `scss` directory. Use the settings and create your own styles and mixin's here.  The contents of the scss directory
+will be compiled into your exhibit css.
+
+For more information, see:
+
+     http://foundation.zurb.com/apps/docs/#!/
+     https://angularjs.org/
+
