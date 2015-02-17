@@ -3,7 +3,7 @@
 This project makes it easy for novice web developers to create sophisticated museum exhibit kiosks implemented as single page JavaScript applications.
 
 The person creating a new exhibit must be able to translate their content outline into a JSON template, create basic html files (that typically require only paragraph tags),
-and resize and them copy images into an image directory. The application uses this information to build an AngularJS single page application. For novices, this is an
+and finally resize and copy images into an image directory. The application uses this information to build an AngularJS single page application. For novices, this work is a brief
 introduction to how the web works.
 
 The application is built using the Foundation for Apps web framework and supports web browsers and mobile devices as well as touchscreen kiosks.
