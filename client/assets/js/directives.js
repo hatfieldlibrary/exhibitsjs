@@ -118,7 +118,7 @@ exhibitDirectives.directive('exbPanel', ['FoundationApi','$timeout', function(fo
                             delay = {delayIn: 1000, delayOut: 1700}
                         }
                     }
-                    console.log(pageType) ;
+
 
                     // animation behaviour changes with panel position
                     scope.$watch(scope.panelPosition.position, function() {
@@ -134,6 +134,7 @@ exhibitDirectives.directive('exbPanel', ['FoundationApi','$timeout', function(fo
                             scope.setAnimation();
                             scope.hide();
                             scope.delayedAnimation(delay);
+
 
                         } else {
 

@@ -21,14 +21,13 @@ url: /
     <div class="show-for-small-only small-11">
         <div id="mobile-prim-nav" zf-panel position="left" class="primary-nav slow bounceInOut panel-fixed panel-left">
             <section class="block-list">
-                <li>
-                    <a zf-close="">Close</a>
+                <li style="text-align: right;padding-right: 15px;">
+                    <a zf-close="">close&nbsp;&nbsp;<img zf-iconic="" icon="circle-x" size="small" class="iconic-color-dark"></a>
                 </li>
                 <li ng-repeat="mainNav in layout.components">
-                    <a ng-click="updateSelectedItem($index);setSelectedPrimary($index);setPanelPosition(context.primaryNavigation.contentType)" ng-class="{selected: $index === selectedPrimary}">{{mainNav.section.name.label}}</a>
-
+                    <a ng-click="updateSelectedItem($index);setSelectedPrimary($index);setSelectedItem(-1);" >{{mainNav.section.name.label}}  </a>
                     <div ng-if="$index === selectedPrimary">
-                        <section class="block-list">
+                        <section class="block-list sub-nav">
                             <li ng-repeat="subNav in layout.components[context.primaryNavigation.selectedItem].section.secondaryNav">
                                 <a ng-click="setPageIndex($index); setPanelPosition(context.secondaryNavigation.contentType); setSelectedItem($index);" zf-close="mobile-prim-nav" zf-open="info" ng-class="{selected: $index === selectedItem}">{{subNav.section.title}}</a>
                             </li>

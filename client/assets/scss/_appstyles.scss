@@ -6,33 +6,35 @@ body {
 #mobile-prim-nav .block-list {
   margin-bottom: 0;
 }
-#mobile-prim-nav .block-list li > a, .block-list li > span, .block-list li > label {
+#mobile-prim-nav .block-list li > a, #mobile-prim-nav .block-list li > span, #mobile-prim-nav .block-list li > label {
   height: auto;
   color: #CBBB92;
-  background: rgba(255, 255, 255, 0.96);
+  background: rgba(177, 177, 168, 0.96);
   border-bottom: 1px solid #858585;
   border-radius: 0;
 
 }
 
+#mobile-prim-nav .sub-nav  li > a {
+  background: #cccccc;
+
+}
+
+#mobile-prim-nav .sub-nav li > a.selected {
+  background: #eaeaea !important;
+  color: #3a312a !important;
+}
+
 
 #mobile-prim-nav  .block-list li {
-  padding-left: 0.5rem;
+
   background: rgba(171, 171, 162, 0.81);
   border-radius: 0;
   margin-top: 0;
 
 }
 
-#mobile-prim-nav .block-list li > a.selected  {
-  background: rgba(163, 163, 155, 0.93) !important;
-  color: #3a312a !important;
-}
 
-#mobile-prim-nav .block-list li .block-list li > a.selected  {
-  background: #bbbbb2 !important;
-  color: #3a312a !important;
-}
 
 .primary-nav .block-list {
   margin-left: -0.5rem;
