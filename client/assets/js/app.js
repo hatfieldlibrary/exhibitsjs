@@ -1,27 +1,27 @@
 (function() {
     'use strict';
 
-    angular.module('exhibitsApp', [
-        'ui.router',
-        'ngAnimate',
-        'ngSanitize',
-        'slick',
+    angular.module(
+        'exhibitsApp', [
 
-        'exhibitControllers',
-        'exhibitServices',
-        'exhibitDirectives',
+            'ngAnimate',
+            'ngSanitize',
+            'slick',
+            'ui.router',
 
-        //foundation
-        'foundation',
-        'foundation.core',
-        'foundation.dynamicRouting',
-        'foundation.dynamicRouting.animations'
-    ])
-        .config(config)
-        .run(run)
-    ;
+            'exhibitControllers',
+            'exhibitServices',
+            'exhibitDirectives',
 
-    ;
+            //foundation
+            'foundation',
+            'foundation.core',
+            'foundation.dynamicRouting',
+            'foundation.dynamicRouting.animations'
+        ]
+    ).config(config)
+        .run(run);
+
     config.$inject = ['$urlRouterProvider', '$locationProvider'];
 
     function config($urlProvider, $locationProvider) {
