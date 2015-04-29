@@ -22,16 +22,16 @@
 
       "name": {
         "label": "LeftNav1",
-        "title": "Painting and the Influence of William Merritt Chase"
+        "title": "LeftNav1 from exhibit.json"
       },
-      "startPage": "assets/html/startPainting.html",
+      "startPage": "assets/html/LeftNav1.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
             "title": "LeftNavSub1",
             "type": "text",
-            "html": "assets/html/sections/chaseTalk.html"
+            "html": "assets/html/sections/LeftNavSub1.html"
           }
         },
         {
@@ -89,7 +89,7 @@
     "section": {
 
       "name": {
-        "label": "Photography",
+        "label": "LeftNav2",
         "title": "Photography and the Camera Club of New York"
       },
       "startPage": "assets/html/startPhotography.html",
@@ -169,7 +169,7 @@
 
 
       "name": {
-        "label": "Poetry",
+        "label": "LeftNav3",
         "title": "Poetry"
       },
       "startPage": "assets/html/startPoetry.html",
@@ -292,7 +292,7 @@
 
 
       "name": {
-        "label": "Travel",
+        "label": "LeftNav4",
         "title": "Travel Letters"
       },
       "startPage": "assets/html/startTravel.html",
