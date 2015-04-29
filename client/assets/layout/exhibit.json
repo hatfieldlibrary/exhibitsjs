@@ -21,7 +21,7 @@
     "section": {
 
       "name": {
-        "label": "Painting",
+        "label": "LeftNav1",
         "title": "Painting and the Influence of William Merritt Chase"
       },
       "startPage": "assets/html/startPainting.html",
@@ -29,7 +29,7 @@
       "secondaryNav": [
         {
           "section": {
-            "title": "William Merritt Chase Talk",
+            "title": "LeftNavSub1",
             "type": "text",
             "html": "assets/html/sections/chaseTalk.html"
           }
