@@ -29,53 +29,31 @@
       "secondaryNav": [
         {
           "section": {
-            "title": "LeftNavSub1",
+            "title": "LeftNav1Sub1",
             "type": "text",
-            "html": "assets/html/sections/LeftNavSub1.html"
+            "html": "assets/html/sections/LeftNav1Sub1.html"
           }
         },
         {
           "section": {
             "type": "image",
-            "title": "Self-Portrait",
-            "creator": "William Merritt Chase",
-            "date": "c. 1914",
+            "title": "LeftNav1Sub2",
+            "creator": "creator name",
+            "date": "c. date",
             "citationType": "artwork",
-            "description": "Oil on canvas. The Detroit Institute of Arts",
-            "imageFileName": "AMICO_DETROIT_1039543998"
+            "description": "this description is in the exhibit.json",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
             "type": "image",
-            "title": "In the Studio",
-            "creator": "William Merrit Chase",
+            "title": "LeftNav1Sub3",
+            "creator": "creator name",
             "date": "c. 1880",
             "citationType": "artwork",
-            "description": "Oil on canvas.  Brooklyn Museum",
-            "imageFileName": "Chase_Studio_Interior"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "William Merritt Chase's Painting Class",
-            "creator": " Myra Albert Wiggins",
-            "date": "1891",
-            "citationType": "artwork",
-            "description": "Gelatin silver print, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
-            "imageFileName": "Chase_Painting_Class"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Corner of My Studio 2",
-            "date": "c. 1934",
-            "creator": "Myra Albert Wiggins",
-            "description": "Oil on canvas, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
-            "citationType": "artwork",
-            "imageFileName": "Corner_of_my_studio"
+            "description": "again all this from the exhibit.json file - no html file",
+            "imageFileName": "ExampleImage2"
           }
         }
       ]
@@ -90,14 +68,14 @@
 
       "name": {
         "label": "LeftNav2",
-        "title": "Photography and the Camera Club of New York"
+        "title": "LeftNav2"
       },
-      "startPage": "assets/html/startPhotography.html",
+      "startPage": "assets/html/LeftNav2.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "Amateur Photography Through Women's Eyes",
+            "title": "LeftNav2Sub1",
             "creator": "Myra Wiggins",
             "type": "image",
             "citationType": "document",
@@ -107,20 +85,20 @@
         },
         {
           "section": {
-            "title": "Genre Photography",
+            "title": "LeftNav2Sub2 - image gallery - width issues",
             "creator": "Myra Wiggins",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Bausch-and-Lomb1",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Bausch-and-Lomb2",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               },
               {
-                "imageFileName": "Bausch-and-Lomb3",
+                "imageFileName": "Gallery3",
                 "description": "Page three"
               }
 
@@ -129,7 +107,7 @@
         },
         {
           "section": {
-            "title": "Trials and Triumphs of an Amateur Photographer",
+            "title": "LeftNav2Sub3 - another gallery",
             "creator": "Myra Wiggins",
             "date": "September, 1926",
             "description": "The American Magazine of Art",
