@@ -21,61 +21,39 @@
     "section": {
 
       "name": {
-        "label": "Painting",
-        "title": "Painting and the Influence of William Merritt Chase"
+        "label": "LeftNav1",
+        "title": "LeftNav1 from exhibit.json"
       },
-      "startPage": "assets/html/startPainting.html",
+      "startPage": "assets/html/LeftNav1.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "William Merritt Chase Talk",
+            "title": "LeftNav1Sub1",
             "type": "text",
-            "html": "assets/html/sections/chaseTalk.html"
+            "html": "assets/html/sections/LeftNav1Sub1.html"
           }
         },
         {
           "section": {
             "type": "image",
-            "title": "Self-Portrait",
-            "creator": "William Merritt Chase",
-            "date": "c. 1914",
+            "title": "LeftNav1Sub2",
+            "creator": "creator name",
+            "date": "c. date",
             "citationType": "artwork",
-            "description": "Oil on canvas. The Detroit Institute of Arts",
-            "imageFileName": "AMICO_DETROIT_1039543998"
+            "description": "this description is in the exhibit.json",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
             "type": "image",
-            "title": "In the Studio",
-            "creator": "William Merrit Chase",
+            "title": "LeftNav1Sub3",
+            "creator": "creator name",
             "date": "c. 1880",
             "citationType": "artwork",
-            "description": "Oil on canvas.  Brooklyn Museum",
-            "imageFileName": "Chase_Studio_Interior"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "William Merritt Chase's Painting Class",
-            "creator": " Myra Albert Wiggins",
-            "date": "1891",
-            "citationType": "artwork",
-            "description": "Gelatin silver print, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
-            "imageFileName": "Chase_Painting_Class"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Corner of My Studio 2",
-            "date": "c. 1934",
-            "creator": "Myra Albert Wiggins",
-            "description": "Oil on canvas, Hallie Ford Museum of Art, The Maribeth Collins Art Acquisition Fund",
-            "citationType": "artwork",
-            "imageFileName": "Corner_of_my_studio"
+            "description": "again all this from the exhibit.json file - no html file",
+            "imageFileName": "ExampleImage2"
           }
         }
       ]
@@ -89,38 +67,39 @@
     "section": {
 
       "name": {
-        "label": "Photography",
-        "title": "Photography and the Camera Club of New York"
+        "label": "LeftNav2",
+        "title": "LeftNav2"
       },
-      "startPage": "assets/html/startPhotography.html",
+      "startPage": "assets/html/LeftNav2.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "Amateur Photography Through Women's Eyes",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav2Sub1",
+            "creator": "Creator goes here",
             "type": "image",
             "citationType": "document",
-            "description": "The Photo-American",
-            "imageFileName": "Amateur_Photography"
+            "description": "Another example of an image - ExampleImage1",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
-            "title": "Genre Photography",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav2Sub2 - image gallery - width issues",
+            "creator": "Again creator goes here",
+            "description": "Can adjust number of images per screen in pageTurner.html",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Bausch-and-Lomb1",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Bausch-and-Lomb2",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               },
               {
-                "imageFileName": "Bausch-and-Lomb3",
+                "imageFileName": "Gallery3",
                 "description": "Page three"
               }
 
@@ -129,31 +108,23 @@
         },
         {
           "section": {
-            "title": "Trials and Triumphs of an Amateur Photographer",
-            "creator": "Myra Wiggins",
-            "date": "September, 1926",
-            "description": "The American Magazine of Art",
+            "title": "LeftNav2Sub3 - another gallery",
+            "creator": "Again creator goes here",
+            "date": "and a date",
+            "description": "Can adjust number of images per screen in pageTurner.html",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Trials_pg_481",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Trials_pg_482",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               },
               {
-                "imageFileName": "Trials_pg_483",
+                "imageFileName": "Gallery3",
                 "description": "Page three"
-              },
-              {
-                "imageFileName": "Trials_pg_484",
-                "description": "Page four"
-              },
-              {
-                "imageFileName": "Trials_pg_485",
-                "description": "Page five"
               }
             ]
           }
@@ -169,35 +140,35 @@
 
 
       "name": {
-        "label": "Poetry",
-        "title": "Poetry"
+        "label": "LeftNav3",
+        "title": "LeftNav3 Title"
       },
-      "startPage": "assets/html/startPoetry.html",
+      "startPage": "assets/html/LeftNav3.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
             "type": "image",
-            "title": "Immanuel",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav3Sub1",
+            "creator": "Creator goes here",
             "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Immanuel"
+            "description": "This is the description",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
-            "title": "My Sweetheart",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
+            "title": "LeftNav3Sub2",
+            "creator": "Creator goes here",
+            "description": "Description goes here",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Wiggins_My-Sweetheart",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Wiggins_My-Sweetheart_back",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               }
 
@@ -207,78 +178,11 @@
         {
           "section": {
             "type": "image",
-            "title": "Spring's Resurrection",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav3Sub3",
+            "creator": "Creator goes here",
             "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Spring's-Resurrection"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "The Lost Butterfly",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
-            "type": "pagesArray",
-            "imageArray": [
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly",
-                "description": "Page one"
-              },
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly_back",
-                "description": "Page two"
-              }
-            ]
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "The Star",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_The-Star"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Two Feasts",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Two-Feasts"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Whistling Swan",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Whistling-Swan"
-          }
-        },
-        {
-          "section": {
-            "title": "Youth's Flowering Field",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
-            "type": "pagesArray",
-            "imageArray": [
-              {
-                "imageFileName": "Wiggins_Youth's-Flowering-Field",
-                "description": "Page one"
-              },
-              {
-                "imageFileName": "Wiggins_Youth's-Flowering-Field_back",
-                "description": "Page two"
-              }
-            ]
+            "description": "Description of image",
+            "imageFileName": "ExampleImage2"
           }
         }
       ]
@@ -292,52 +196,27 @@
 
 
       "name": {
-        "label": "Travel",
-        "title": "Travel Letters"
+        "label": "LeftNav4",
+        "title": "LeftNav4 Title"
       },
-      "startPage": "assets/html/startTravel.html",
+      "startPage": "assets/html/LeftNav4.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "Constantinople and Ephesus, 1904",
+            "title": "LeftNav4Sub1 - text",
             "type": "text",
-            "html": "assets/html/sections/constantinople.html"
+            "html": "assets/html/sections/LeftNav4Sub1.html"
           }
         },
         {
           "section": {
-            "title": "Galilee, 1904",
-            "type": "text",
-            "html": "assets/html/sections/galilee.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Tiberias and the Sea of Galilee, 1904",
-            "type": "text",
-            "html": "assets/html/sections/tiberias.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Pyramids and Bazaars, 1904",
-            "type": "text",
-            "html": "assets/html/sections/pyramids.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Saint Peter’s, 1904",
-            "type": "text",
-            "html": "assets/html/sections/stpeters.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Coliseum, 1904",
-            "type": "text",
-            "html": "assets/html/sections/coliseum.html"
+            "type": "image",
+            "title": "LeftNav4Sub2 - image",
+            "creator": "Creator goes here",
+            "citationType": "document",
+            "description": "A repeat of the exampleimage1",
+            "imageFileName": "ExampleImage1"
           }
         }
       ]
