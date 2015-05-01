@@ -76,17 +76,18 @@
         {
           "section": {
             "title": "LeftNav2Sub1",
-            "creator": "Myra Wiggins",
+            "creator": "Creator goes here",
             "type": "image",
             "citationType": "document",
-            "description": "The Photo-American",
-            "imageFileName": "Amateur_Photography"
+            "description": "Another example of an image - ExampleImage1",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
             "title": "LeftNav2Sub2 - image gallery - width issues",
-            "creator": "Myra Wiggins",
+            "creator": "Again creator goes here",
+            "description": "Can adjust number of images per screen in pageTurner.html",
             "type": "pagesArray",
             "imageArray": [
               {
@@ -108,30 +109,22 @@
         {
           "section": {
             "title": "LeftNav2Sub3 - another gallery",
-            "creator": "Myra Wiggins",
-            "date": "September, 1926",
-            "description": "The American Magazine of Art",
+            "creator": "Again creator goes here",
+            "date": "and a date",
+            "description": "Can adjust number of images per screen in pageTurner.html",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Trials_pg_481",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Trials_pg_482",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               },
               {
-                "imageFileName": "Trials_pg_483",
+                "imageFileName": "Gallery3",
                 "description": "Page three"
-              },
-              {
-                "imageFileName": "Trials_pg_484",
-                "description": "Page four"
-              },
-              {
-                "imageFileName": "Trials_pg_485",
-                "description": "Page five"
               }
             ]
           }
@@ -148,34 +141,34 @@
 
       "name": {
         "label": "LeftNav3",
-        "title": "Poetry"
+        "title": "LeftNav3 Title"
       },
-      "startPage": "assets/html/startPoetry.html",
+      "startPage": "assets/html/LeftNav3.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
             "type": "image",
-            "title": "Immanuel",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav3Sub1",
+            "creator": "Creator goes here",
             "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Immanuel"
+            "description": "This is the description",
+            "imageFileName": "ExampleImage1"
           }
         },
         {
           "section": {
-            "title": "My Sweetheart",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
+            "title": "LeftNav3Sub2",
+            "creator": "Creator goes here",
+            "description": "Description goes here",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Wiggins_My-Sweetheart",
+                "imageFileName": "Gallery1",
                 "description": "Page one"
               },
               {
-                "imageFileName": "Wiggins_My-Sweetheart_back",
+                "imageFileName": "Gallery2",
                 "description": "Page two"
               }
 
@@ -185,78 +178,11 @@
         {
           "section": {
             "type": "image",
-            "title": "Spring's Resurrection",
-            "creator": "Myra Wiggins",
+            "title": "LeftNav3Sub3",
+            "creator": "Creator goes here",
             "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Spring's-Resurrection"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "The Lost Butterfly",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
-            "type": "pagesArray",
-            "imageArray": [
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly",
-                "description": "Page one"
-              },
-              {
-                "imageFileName": "Wiggins_The-Lost-Butterfly_back",
-                "description": "Page two"
-              }
-            ]
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "The Star",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_The-Star"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Two Feasts",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Two-Feasts"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "Whistling Swan",
-            "creator": "Myra Wiggins",
-            "citationType": "document",
-            "description": "Pacific Northwest Artists Collection",
-            "imageFileName": "Wiggins_Whistling-Swan"
-          }
-        },
-        {
-          "section": {
-            "title": "Youth's Flowering Field",
-            "creator": "Myra Wiggins",
-            "description": "Pacific Northwest Artists Collection",
-            "type": "pagesArray",
-            "imageArray": [
-              {
-                "imageFileName": "Wiggins_Youth's-Flowering-Field",
-                "description": "Page one"
-              },
-              {
-                "imageFileName": "Wiggins_Youth's-Flowering-Field_back",
-                "description": "Page two"
-              }
-            ]
+            "description": "Description of image",
+            "imageFileName": "ExampleImage2"
           }
         }
       ]
@@ -271,51 +197,26 @@
 
       "name": {
         "label": "LeftNav4",
-        "title": "Travel Letters"
+        "title": "LeftNav4 Title"
       },
-      "startPage": "assets/html/startTravel.html",
+      "startPage": "assets/html/LeftNav4.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "Constantinople and Ephesus, 1904",
+            "title": "LeftNav4Sub1 - text",
             "type": "text",
-            "html": "assets/html/sections/constantinople.html"
+            "html": "assets/html/sections/LeftNav4Sub1.html"
           }
         },
         {
           "section": {
-            "title": "Galilee, 1904",
-            "type": "text",
-            "html": "assets/html/sections/galilee.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Tiberias and the Sea of Galilee, 1904",
-            "type": "text",
-            "html": "assets/html/sections/tiberias.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Pyramids and Bazaars, 1904",
-            "type": "text",
-            "html": "assets/html/sections/pyramids.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Saint Peter’s, 1904",
-            "type": "text",
-            "html": "assets/html/sections/stpeters.html"
-          }
-        },
-        {
-          "section": {
-            "title": "Coliseum, 1904",
-            "type": "text",
-            "html": "assets/html/sections/coliseum.html"
+            "type": "image",
+            "title": "LeftNav4Sub2 - image",
+            "creator": "Creator goes here",
+            "citationType": "document",
+            "description": "A repeat of the exampleimage1",
+            "imageFileName": "ExampleImage1"
           }
         }
       ]
