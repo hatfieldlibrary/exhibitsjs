@@ -55,6 +55,30 @@
             "description": "again all this from the exhibit.json file - no html file",
             "imageFileName": "ExampleImage2"
           }
+        },
+        {
+          "section": {
+            "type": "imageAndText",
+            "title": "LeftNav1Sub4 (text+image)",
+            "creator": "creator name",
+            "date": "c. date",
+            "citationType": "artwork",
+            "imageAlign": "right",
+            "imageFileName": "ExampleImage2",
+            "html": "assets/html/sections/LeftNav4Sub1.html"
+          }
+        },
+        {
+          "section": {
+            "type": "imageAndText",
+            "title": "LeftNav1Sub5 (text+image)",
+            "creator": "creator name",
+            "date": "c. date",
+            "citationType": "artwork",
+            "imageAlign": "left",
+            "imageFileName": "ExampleImage1",
+            "html": "assets/html/sections/LeftNav4Sub1.html"
+          }
         }
       ]
     }
