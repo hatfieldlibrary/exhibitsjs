@@ -1,0 +1,18 @@
+<div class="block-block">
+
+    <!-- zf-interchange throwing error in console, perhaps because images are indentical -->
+    <!-- <zf-interchange> -->
+    <!-- <img media="small" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">
+     <img media="medium" src="/assets/images/{{context.pageElements.imageFileName}}.jpg">   -->
+
+    <div class="grid-content">
+        <div class="card" style="background: transparent !important; border: none; color: #B8B097;box-shadow: none;">
+            <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg" align="{{context.pageElements.imageAlign}}" style="padding: 15px; width: 45%;" >
+            <!--   </zf-interchange>-->
+            <div style="width:85%;">
+            <ng-include src="context.pageElements.html" style="padding: 15px;"></ng-include>
+            </div>
+
+        </div>
+    </div>
+</div>

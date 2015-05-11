@@ -45,7 +45,7 @@ exhibitDirectives.directive('exbTextAndImage', function() {
         scope: false,
         restrict: 'EA',
         replace: true,
-        templateUrl: 'assets/components/pageTurner.html'
+        templateUrl: 'assets/components/textAndImage.html'
     }
 });
 

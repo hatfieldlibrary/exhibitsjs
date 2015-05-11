@@ -9,7 +9,7 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
 
     var _imageFileName;
 
-    var _currentPage;
+    var _currentHtmlPage;
 
     var _imageTitle;
 
@@ -40,6 +40,8 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
     var _creator;
 
     var _citationType;
+
+    var _imageAlign;
 
     var service = {};
 
@@ -81,13 +83,14 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
             citationType: '',
             html: '',
             imageArray: '',
+            imageAlign: '',
             contentType: ''
         }
 
     };
 
-    // Retrieves the exhibit json file and sets layout object
-    // JSON array. Returns a reference to the controller.
+    // Retrieves the exhibit json file and sets layout JSON object.
+    // Returns a reference to the layout object to the controller.
     service.init = function(callback) {
 
         $http.get('assets/layout/exhibit.json').
@@ -129,23 +132,30 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
     service.setCurrentPage = function(position) {
 
         _imageFileName = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageFileName;
-        _currentPage =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.html;
+        _currentHtmlPage =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.html;
         _imageTitle = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.title;
         _description =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.description;
         _contentType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.type;
         _date = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.date;
         _creator = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.creator;
         _citationType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.citationType;
+        _imageAlign = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageAlign;
         if (layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray != null) {
             _imageArray = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray;
         } else {
             _imageArray = [];
         }
+        if  (layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageAlign !== undefined) {
+            _imageAlign = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageAlign;
+        }  else {
+            _imageAlign = "left";
+        }
 
         // page elements
-        service.context.pageElements.html = _currentPage;
+        service.context.pageElements.html = _currentHtmlPage;
         service.context.pageElements.imageArray = _imageArray;
         service.context.pageElements.imageFileName = _imageFileName;
+        service.context.pageElements.imageAlign = _imageAlign;
         service.context.pageElements.contentType = _contentType;
         service.context.pageElements.citationType = _citationType;
         service.context.pageElements.title = _imageTitle;
@@ -161,7 +171,7 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
 
         _selectedItemPrimary = position;
         _contentTypePrimary = layout.components[position].section.type;
-        if (_contentType == 'text') {
+        if (_contentType === 'text') {
             _contentCategoryPrimary = 'textinfo';
         }  else {
             _contentCategoryPrimary = 'imageinfo';
