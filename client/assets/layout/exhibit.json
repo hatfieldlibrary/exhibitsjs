@@ -21,63 +21,48 @@
     "section": {
 
       "name": {
-        "label": "LeftNav1",
-        "title": "LeftNav1 from exhibit.json"
+        "label": "About the collection",
+        "title": "The Vernor Martin Sackett Negative Collection"
       },
-      "startPage": "assets/html/LeftNav1.html",
-      "type": "text",
+      "startPage": "assets/html/startTheSackettFamily.html",
+      "type": "imageAndText",
+      "imageAlign": "left",
+      "imageFileName": "BasementBar",
       "secondaryNav": [
         {
           "section": {
-            "title": "LeftNav1Sub1",
-            "type": "text",
-            "html": "assets/html/sections/LeftNav1Sub1.html"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "LeftNav1Sub2",
-            "creator": "creator name",
-            "date": "c. date",
-            "citationType": "artwork",
-            "description": "this description is in the exhibit.json",
-            "imageFileName": "ExampleImage1"
-          }
-        },
-        {
-          "section": {
-            "type": "image",
-            "title": "LeftNav1Sub3",
-            "creator": "creator name",
-            "date": "c. 1880",
-            "citationType": "artwork",
-            "description": "again all this from the exhibit.json file - no html file",
-            "imageFileName": "ExampleImage2"
-          }
-        },
-        {
-          "section": {
             "type": "imageAndText",
-            "title": "LeftNav1Sub4 (text+image)",
-            "creator": "creator name",
-            "date": "c. date",
-            "citationType": "artwork",
-            "imageAlign": "right",
-            "imageFileName": "ExampleImage2",
-            "html": "assets/html/sections/LeftNav4Sub1.html"
-          }
-        },
-        {
-          "section": {
-            "type": "imageAndText",
-            "title": "LeftNav1Sub5 (text+image)",
-            "creator": "creator name",
-            "date": "c. date",
-            "citationType": "artwork",
+            "title": "The Sackett Family",
             "imageAlign": "left",
-            "imageFileName": "ExampleImage1",
-            "html": "assets/html/sections/LeftNav4Sub1.html"
+            "imageFileName": "PaandMaStanding",
+            "html": "assets/html/sections/FredandHattie.html"
+          }
+        },
+        {
+          "section": {
+            "type": "imageAndText",
+            "title": "Leland",
+            "imageAlign": "left",
+            "imageFileName": "LRSackett",
+            "html": "assets/html/sections/Leland.html"
+          }
+        },
+        {
+          "section": {
+            "type": "imageAndText",
+            "title": "Vernor",
+            "imageAlign": "left",
+            "imageFileName": "VernorMSackett",
+            "html": "assets/html/sections/Vernor.html"
+          }
+        },
+        {
+          "section": {
+            "type": "imageAndText",
+            "title": "Sheldon",
+            "imageAlign": "left",
+            "imageFileName": "Ischeannouncement",
+            "html": "assets/html/sections/Sheldon.html"
           }
         }
       ]
@@ -91,64 +76,242 @@
     "section": {
 
       "name": {
-        "label": "LeftNav2",
-        "title": "LeftNav2"
+        "label": "World War I",
+        "title": "1917-1918",
+        "imageFileName": "CrossingtheRhineAndernach"
       },
-      "startPage": "assets/html/LeftNav2.html",
+      "startPage": "assets/html/startWorldWarI.html",
       "type": "text",
       "secondaryNav": [
         {
           "section": {
-            "title": "LeftNav2Sub1",
-            "creator": "Creator goes here",
-            "type": "image",
-            "citationType": "document",
-            "description": "Another example of an image - ExampleImage1",
-            "imageFileName": "ExampleImage1"
-          }
-        },
-        {
-          "section": {
-            "title": "LeftNav2Sub2 - image gallery - width issues",
-            "creator": "Again creator goes here",
-            "description": "Can adjust number of images per screen in pageTurner.html",
+            "title": "Germany",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Gallery1",
-                "description": "Page one"
+                "imageFileName": "YMCAmoviesnightpromotion",
+                "description": "YMCA Movies Night Promotion",
+                "year": "1919",
+                "identifier": "VMS_750"
               },
               {
-                "imageFileName": "Gallery2",
-                "description": "Page two"
+                "imageFileName": "VMSwithasoldier",
+                "description": "VMS with a Soldier",
+                "year": "1919",
+                "identifier": "VMS_733"
               },
               {
-                "imageFileName": "Gallery3",
-                "description": "Page three"
+                "imageFileName": "Threesoldiersstanding",
+                "description": "Three soldiers standing",
+                "year": "1919",
+                "identifier": "VMS_761A"
+              },
+              {
+                "imageFileName": "TwobuddiesandRemagenbridge",
+                "description": "Two Buddies and Remagen Bridge",
+                "year": "1919",
+                "identifier": "VMS_625A"
+              },
+              {
+                "imageFileName": "TheOldMaidsHousewherewestayedback",
+                "description": "The Old Maids House Where We Stayed Back",
+                "year": "1919",
+                "identifier": "VMS_633A"
+              },
+              {
+                "imageFileName": "Soldiersplayingbaseball",
+                "description": "Soldiers Playing Baseball",
+                "year": "1919",
+                "identifier": "VMS_729"
+              },
+              {
+                "imageFileName": "Soldierreadingandsoldieratthesink",
+                "description": "Soldiers Reading and Soldier at the Sink",
+                "year": "1919",
+                "identifier": "VMS_740"
+              },
+              {
+                "imageFileName": "Soldiergroupphoto",
+                "description": "Soldier Group Photo",
+                "year": "1919",
+                "identifier": "VMS_743"
               }
+            ]
+          }
+        }
+      ]
+    }
+  },
 
+  {
+
+    "section": {
+
+
+      "name": {
+        "label": "Willamette University",
+        "type": "imageAndText",
+        "imageAlign": "left",
+        "imageFileName": "WallerEatonCapitolDome",
+        "title": "1918-1922"
+      },
+      "startPage": "assets/html/startWillametteUniversity.html",
+      "type": "text",
+      "secondaryNav": [
+        {
+          "section": {
+            "title": "Campus",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+              "imageFileName": "WallerHall",
+                "description": "Waller Hall",
+                "year": "Early 1920s",
+                "identifier": "VMS_059A"
+              },
+              {
+              "imageFileName": "SnapsofChemLabatWillamette_copy",
+                "description": "Snaps of Chem Lab at Willamette",
+                "year": "Early 1920s",
+                "identifier": "VMS_512A"
+              },
+              {
+                "imageFileName": "BuildingtheNewLausanne",
+                "description": "Building the new Lausanne",
+                "year": "1920",
+                "identifier": "VMS_655A"
+              },
+              {
+                "imageFileName": "Cleaningupremainsofgym",
+                "description": "Cleaning Up Remains of Gym",
+                "year": "Early 1920s",
+                "identifier": "VMS_061A"
+              }
             ]
           }
         },
         {
           "section": {
-            "title": "LeftNav2Sub3 - another gallery",
-            "creator": "Again creator goes here",
-            "date": "and a date",
-            "description": "Can adjust number of images per screen in pageTurner.html",
+            "title": "Sports",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Gallery1",
-                "description": "Page one"
+                "imageFileName": "Wapato",
+                "description": "Wapato",
+                "year": "Early 1920s",
+                "identifier": "VMS_453A"
               },
               {
-                "imageFileName": "Gallery2",
-                "description": "Page two"
+                "imageFileName": "InterClassTrackMeetPollock",
+                "description": "Inter Class Track Meet Pollock",
+                "year": "Early 1920s",
+                "identifier": "VMS_450A"
               },
               {
-                "imageFileName": "Gallery3",
-                "description": "Page three"
+                "imageFileName": "GirlsBasketballMidgeFlegel",
+                "description": "Girls Basketball Midge Flegel",
+                "year": "1922",
+                "identifier": "VMS_030A"
+              },
+              {
+                "imageFileName": "Hurdlers",
+                "description": "Hurdlers",
+                "year": "Early 1920s",
+                "identifier": "VMS_457A"
+              },
+              {
+                "imageFileName": "DoneyPrays",
+                "description": "Doney Prays",
+                "year": "1921",
+                "identifier": "VMS_460A"
+              },
+              {
+                "imageFileName": "ProfsHewittMathews",
+                "description": "Professors Hewitt and Mathews",
+                "year": "1920",
+                "identifier": "VMS_383A"
+              }
+            ]
+          }
+        },
+        {
+          "section": {
+            "title": "Prohibition",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+                "imageFileName": "BasementBar",
+                "description": "Basement Bar",
+                "year": "1922",
+                "identifier": "VMS_325A"
+              },
+              {
+                "imageFileName": "OurPartyinStillbytheVats",
+                "description": "Our Party in Still by the Vats",
+                "year": "Early 1920s",
+                "identifier": "VMS_213A"
+              },
+              {
+                "imageFileName": "FrontviewofStill",
+                "description": "Front View of Still",
+                "year": "Early 1920s",
+                "identifier": "VMS_211A"
+              },
+              {
+                "imageFileName": "SheriffManningwithDeputiesMcQueenand",
+                "description": "Sheriff Manning with Deputies McQueen and [unknown]",
+                "year": "Early 1920s",
+                "identifier": "VMS_208A"
+              }
+            ]
+          }
+        },
+        {
+          "section": {
+            "title": "Student Life",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+                "imageFileName": "VarsityBand",
+                "description": "Varsity Band",
+                "year": "1920",
+                "identifier": "VMS_405A"
+              },
+              {
+                "imageFileName": "CravenandIatMayDay",
+                "description": "Craven and I at May Day",
+                "year": "1922",
+                "identifier": "VMS_130"
+              },
+              {
+                "imageFileName": "StagMixBoxing",
+                "description": "Stag Mix Boxing",
+                "year": "1921",
+                "identifier": "VMS_697"
+              },
+              {
+                "imageFileName": "DeltaPhiGroupPhoto",
+                "description": "Delta Phi Group Photo",
+                "year": "Early 1920s",
+                "identifier": "VMS_555A"
+              },
+              {
+                "imageFileName": "CainandAbelcomingoutofthegarden",
+                "description": "Cain and Abel coming out of the garden",
+                "year": "1922",
+                "identifier": "VMS_306A"
+              },
+              {
+                "imageFileName": "SquintJeteVMS",
+                "description": "Squint Jete VMS",
+                "year": "1920",
+                "identifier": "VMS_657A"
+              },
+              {
+                "imageFileName": "Castphotoincostume",
+                "description": "Cast Photo in Costume",
+                "year": "1922",
+                "identifier": "VMS_330A"
               }
             ]
           }
@@ -164,83 +327,146 @@
 
 
       "name": {
-        "label": "LeftNav3",
-        "title": "LeftNav3 Title"
+        "label": "Travel",
+        "title": "1922-1930"
       },
-      "startPage": "assets/html/LeftNav3.html",
-      "type": "text",
+      "startPage": "assets/html/startTravel.html",
+      "type": "imageAndText",
+      "imageFileName": "EdIatLake",
+      "description": "Ed I at Lake",
       "secondaryNav": [
         {
           "section": {
-            "type": "image",
-            "title": "LeftNav3Sub1",
-            "creator": "Creator goes here",
-            "citationType": "document",
-            "description": "This is the description",
-            "imageFileName": "ExampleImage1"
-          }
-        },
-        {
-          "section": {
-            "title": "LeftNav3Sub2",
-            "creator": "Creator goes here",
-            "description": "Description goes here",
+            "title": "Wallowa",
             "type": "pagesArray",
             "imageArray": [
               {
-                "imageFileName": "Gallery1",
-                "description": "Page one"
+                "imageFileName": "SnapsofWallowaLake",
+                "description": "Snaps of Wallowa Lake",
+                "year": "Early 1920s",
+                "identifier": "VMS_540A"
               },
               {
-                "imageFileName": "Gallery2",
-                "description": "Page two"
+                "imageFileName": "MaryatWallowaLake",
+                "description": "Mary at Wallowa Lake",
+                "year": "Early 1920s",
+                "identifier": "VMS_550A"
+              },
+              {
+                "imageFileName": "SnapsofWallowaLake copy 4",
+                "description": "Snaps of Wallowa Lake",
+                "year": "Early 1920s",
+                "identifier": "VMS_539A"
+              },
+              {
+                "imageFileName": "SnapsofWallowaLake copy 3",
+                "description": "Snaps of Wallowa Lake",
+                "year": "Early 1920s",
+                "identifier": "VMS_541A"
               }
-
             ]
           }
         },
         {
           "section": {
-            "type": "image",
-            "title": "LeftNav3Sub3",
-            "creator": "Creator goes here",
-            "citationType": "document",
-            "description": "Description of image",
-            "imageFileName": "ExampleImage2"
-          }
-        }
-      ]
-    }
-
-  },
-
-  {
-
-    "section": {
-
-
-      "name": {
-        "label": "LeftNav4",
-        "title": "LeftNav4 Title"
-      },
-      "startPage": "assets/html/LeftNav4.html",
-      "type": "text",
-      "secondaryNav": [
-        {
-          "section": {
-            "title": "LeftNav4Sub1 - text",
-            "type": "text",
-            "html": "assets/html/sections/LeftNav4Sub1.html"
+            "title": "Oregon Coast",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+                "imageFileName": "Womanholdingababyseal",
+                "description": "Woman holding a baby seal",
+                "year": "1922",
+                "identifier": "VMS_260A"
+              },
+              {
+                "imageFileName": "Rockaway",
+                "description": "Rockaway",
+                "year": "1920",
+                "identifier": "VMS_676A"
+              },
+              {
+                "imageFileName": "PacificCitycamp",
+                "description": "Pacific City Camp",
+                "year": "Early 1920s",
+                "identifier": "VMS_068A"
+              },
+              {
+                "imageFileName": "OuraquariumatPacificCity",
+                "description": "Our Aquarium at Pacific City",
+                "year": "Early 1920s",
+                "identifier": "VMS_065A"
+              },
+              {
+                "imageFileName": "OnthebeachatPacificCity",
+                "description": "On the beach at Pacific City",
+                "year": "Early 1920s",
+                "identifier": "VMS_069A"
+              },
+              {
+                "imageFileName": "CoastcliffatPacificCity",
+                "description": "Coast Cliff at Pacific City",
+                "year": "Early 1920s",
+                "identifier": "VMS_067A"
+              }
+            ]
           }
         },
         {
           "section": {
-            "type": "image",
-            "title": "LeftNav4Sub2 - image",
-            "creator": "Creator goes here",
-            "citationType": "document",
-            "description": "A repeat of the exampleimage1",
-            "imageFileName": "ExampleImage1"
+            "title": "Yosemite",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+                "imageFileName": "YosemiteValleySake",
+                "description": "Yosemite Valley Sake",
+                "year": "Early 1920s",
+                "identifier": "VMS_171"
+              },
+              {
+                "imageFileName": "SadieatYosemitebywater",
+                "description": "Sadie at Yosemite by Water",
+                "year": "Early 1920s",
+                "identifier": "VMS_169"
+              },
+              {
+                "imageFileName": "OurpartygazingintoYosemitefromWawannaRd",
+                "description": "Our party gazing into Yosemite from Wawanna Rd",
+                "year": "Early 1920s",
+                "identifier": "VMS_170_2"
+              }
+            ]
+          }
+        },
+        {
+          "section": {
+            "title": "Silver Creek Falls",
+            "type": "pagesArray",
+            "imageArray": [
+              {
+                "imageFileName": "NorthFallRapidsSilverCreek",
+                "description": "Noth Fall Rapids Silver Creek",
+                "year": "Early 1920s",
+                "identifier": "VMS_472A"
+              },
+              {
+                "imageFileName": "OntheroadtoSilverCreekFalls",
+                "description": "On the road to Silver Creek Falls",
+                "year": "1920",
+                "identifier": "VMS_350A"
+              },
+              {
+                "imageFileName": "BlackieandDorothy",
+                "description": "Blackie and Dorothy",
+                "year": "1920",
+                "identifier": "VMS_659A"
+              },
+              {
+                "imageFileName": "Goaheadandtakeitwedontcare",
+                "description": "Go Ahead and Take It We Don't Care",
+                "year": "1920",
+                "identifier": "VMS_354A"
+              }
+            ]
           }
         }
       ]
