@@ -7,6 +7,9 @@
 
     <div class="grid-content">
         <div class="card" style="background: transparent !important; border: none; color: #B8B097;box-shadow: none;">
+            <span ng-if="context.pageElements.showTitle=='true'">
+              <h3>{{context.pageElements.title}}</h3>
+            </span>
             <img media="large" src="assets/images/{{context.pageElements.imageFileName}}.jpg" align="{{context.pageElements.imageAlign}}" style="padding: 15px; width: 45%;" >
             <!--   </zf-interchange>-->
             <div style="width:85%;">

@@ -1,6 +1,8 @@
 <div class="text-background">
     <div>
-        <h3>{{context.pageElements.title}}</h3>
+        <span ng-if="context.pageElements.showTitle !='false'">
+              <h3>{{context.pageElements.title}}</h3>
+        </span>
 
         <ng-include src="context.pageElements.html" ></ng-include>
         <hr>
