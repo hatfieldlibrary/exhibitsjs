@@ -6,7 +6,10 @@
 
         <div ng-repeat="image in context.pageElements.imageArray">
             <img  data-lazy="assets/images/{{image.imageFileName}}.jpg" style="max-height: 850px;max-width: 600px;">
-            <p>{{image.description}}</p>
+            <p>{{image.description}}.
+            {{image.year}}.
+            {{image.identifier}}.
+            </p>
         </div>
 
     </slick>

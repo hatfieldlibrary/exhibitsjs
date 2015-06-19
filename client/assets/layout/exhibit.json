@@ -77,11 +77,11 @@
 
       "name": {
         "label": "World War I",
-        "title": "1917-1918",
-        "imageFileName": "CrossingtheRhineAndernach"
+        "title": "1917-1918"
       },
       "startPage": "assets/html/startWorldWarI.html",
-      "type": "text",
+      "imageFileName": "CrossingtheRhineAndernach",
+      "type": "imageAndText",
       "secondaryNav": [
         {
           "section": {
@@ -150,13 +150,13 @@
 
       "name": {
         "label": "Willamette University",
-        "type": "imageAndText",
-        "imageAlign": "left",
-        "imageFileName": "WallerEatonCapitolDome",
         "title": "1918-1922"
       },
       "startPage": "assets/html/startWillametteUniversity.html",
       "type": "text",
+      "type": "imageAndText",
+      "imageAlign": "bottom",
+      "imageFileName": "WallerEatonCapitolDome",
       "secondaryNav": [
         {
           "section": {
@@ -444,7 +444,7 @@
             "imageArray": [
               {
                 "imageFileName": "NorthFallRapidsSilverCreek",
-                "description": "Noth Fall Rapids Silver Creek",
+                "description": "North Fall Rapids Silver Creek",
                 "year": "Early 1920s",
                 "identifier": "VMS_472A"
               },
