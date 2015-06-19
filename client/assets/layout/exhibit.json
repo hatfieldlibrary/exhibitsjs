@@ -181,7 +181,8 @@
             "creator": "Creator goes here",
             "citationType": "document",
             "description": "This is the description",
-            "imageFileName": "ExampleImage1"
+            "imageFileName": "ExampleImage1",
+            "showTitle": "true"
           }
         },
         {

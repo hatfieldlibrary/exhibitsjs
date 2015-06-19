@@ -145,6 +145,7 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         _creator = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.creator;
         _citationType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.citationType;
         _imageAlign = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageAlign;
+        _showTitle = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.showTitle;
         if (layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray != null) {
             _imageArray = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray;
         } else {
@@ -167,6 +168,8 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         service.context.pageElements.description = _description;
         service.context.pageElements.creator = _creator;
         service.context.pageElements.date = _date;
+        service.context.pageElements.showTitle = _showTitle;
+
 
 
     };
