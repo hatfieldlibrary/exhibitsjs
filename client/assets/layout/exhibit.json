@@ -26,6 +26,7 @@
       },
       "startPage": "assets/html/LeftNav1.html",
       "type": "text",
+      "showTitle": "false",
       "secondaryNav": [
         {
           "section": {
@@ -168,7 +169,10 @@
         "title": "LeftNav3 Title"
       },
       "startPage": "assets/html/LeftNav3.html",
-      "type": "text",
+      "type": "imageAndText",
+      "imageFileName": "ExampleImage1",
+      "imageAlign": "bottom",
+      "showTitle": "true",
       "secondaryNav": [
         {
           "section": {
@@ -177,7 +181,8 @@
             "creator": "Creator goes here",
             "citationType": "document",
             "description": "This is the description",
-            "imageFileName": "ExampleImage1"
+            "imageFileName": "ExampleImage1",
+            "showTitle": "true"
           }
         },
         {

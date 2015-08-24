@@ -1,12 +1,14 @@
 
 <div class="text-background" style="padding-left: 30px; padding-right: 30px;">
 
-    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" fade="false"  arrows="true" slides-to-show="2" slides-to-scroll="2" dots="true">
+    <slick init-onload="true" infinite="false" autoplay="false" data="context.pageElements.imageArray" fade="false"  arrows="true" slides-to-show="1" slides-to-scroll="1" dots="true">
 
 
         <div ng-repeat="image in context.pageElements.imageArray">
             <img  data-lazy="assets/images/{{image.imageFileName}}.jpg" style="max-height: 850px;max-width: 600px;">
+            <p>{{image.description}}</p>
         </div>
+
     </slick>
     <p>
         {{context.pageElements.creator}}{{addDelimiter(context.pageElements.creator)}}

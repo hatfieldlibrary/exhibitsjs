@@ -43,6 +43,8 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
 
     var _imageAlign;
 
+    var _showTitle;
+
     var service = {};
 
     /*
@@ -67,7 +69,10 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
 
         primaryNavigation: {
             contentCategory: '',
-            selectedItem:''
+            selectedItem:'',
+            imageFileName: '',
+            imageAlign: '',
+            showTitle: ''
         },
         secondaryNavigation: {
             contentType: '',
@@ -140,6 +145,7 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         _creator = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.creator;
         _citationType =  layout.components[_selectedItemPrimary].section.secondaryNav[position].section.citationType;
         _imageAlign = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageAlign;
+        _showTitle = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.showTitle;
         if (layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray != null) {
             _imageArray = layout.components[_selectedItemPrimary].section.secondaryNav[position].section.imageArray;
         } else {
@@ -162,6 +168,8 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         service.context.pageElements.description = _description;
         service.context.pageElements.creator = _creator;
         service.context.pageElements.date = _date;
+        service.context.pageElements.showTitle = _showTitle;
+
 
 
     };
@@ -179,16 +187,27 @@ exhibitServices.factory('exhibitLayoutFactory', function($http) {
         _secondaryNav = layout.components[position].section.secondaryNav;
         _currentPagePrimary = layout.components[position].section.startPage;
         _currentTitlePrimary = layout.components[position].section.name.title;
+        _imageFileName = layout.components[position].section.imageFileName;
+        _imageAlign = layout.components[position].section.imageAlign;
+        _showTitle = layout.components[position].section.showTitle;
+
 
         // primary-level page elements
         service.context.pageElements.contentType = _contentTypePrimary;
         service.context.pageElements.title = _currentTitlePrimary;
         service.context.pageElements.html = _currentPagePrimary;
         service.context.pageElements.citationType = _citationType;
+        service.context.pageElements.imageFileName = _imageFileName;
+        service.context.pageElements.imageAlign = _imageAlign;
+        service.context.pageElements.showTitle = _showTitle;
+
+
+
 
         // primary elements
         service.context.primaryNavigation.contentCategory = _contentCategoryPrimary;
         service.context.primaryNavigation.selectedItem = _selectedItemPrimary;
+
 
     };
 
